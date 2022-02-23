@@ -418,7 +418,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef8492450e8574e94e32d1c1a6a7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfNpcs: 50
+  numOfNpcs: 1
+  NPCPrefab: {fileID: 3853366644124287745, guid: 88586acbce9828c43930b8832e90155f,
+    type: 3}
 --- !u!4 &1460029813
 Transform:
   m_ObjectHideFlags: 0

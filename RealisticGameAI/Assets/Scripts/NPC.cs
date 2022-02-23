@@ -5,35 +5,35 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
 
-    public string fullName;
+    public string fullName;  
+    public string sex;
     public int age;
     public int happiness;
+    public string JobTitle;
     public Job job;
-    private string sex;
-
 
 void Start()
     {
-        sex = RandomSex();
+        sex = AssignSex();
         age = Random.Range(1, 80);
-        fullName = RandomName(sex);
+        fullName = AssignName(sex);
         happiness = Random.Range(0, 100);
     }
 
-    public string RandomSex()
+    public string AssignSex()
     {
         int sexInt = Random.Range(0, 2);
         if (sexInt == 0)
         {
-            return "m";
+            return "Male";
         }
         else
         {
-            return "f";
+            return "Female";
         }
     }
 
-    public string RandomName(string sex)
+    public string AssignName(string sex)
     {
 
         string[] maleNames = {"James", "Robert", "John", "Micheal", "William", "David",
@@ -47,7 +47,7 @@ void Start()
 
         string RandName;
 
-        if (sex == "m")
+        if (sex == "Male")
         {
             RandName = maleNames[Random.Range(0, maleNames.Length)] + " " +
             surnames[Random.Range(0, surnames.Length)];
@@ -61,6 +61,16 @@ void Start()
 
         return RandName;
     }
+    public void AssignJob () {
+         
+        int i = Random.Range(0, GameManager.jobs.Length);
 
-
+        if (GameManager.jobs[i].isAvailable()) {
+            GameManager.jobs[i].increaseCurrent();
+            job = GameManager.jobs[i];
+            JobTitle = GameManager.jobs[i].type;
+        } else {
+            AssignJob();
+        }
+    }
 }
