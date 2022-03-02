@@ -5,36 +5,43 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
 
+
+
     public string fullName;  
     public string sex;
     public int age;
     public int happiness;
     public string JobTitle;
+    public int IdNumber;
+    
     public Job job;
+    public House house;
+
 
 void Start()
     {
+        IdNumber = AssignID();
         sex = AssignSex();
         age = Random.Range(1, 80);
         fullName = AssignName(sex);
         happiness = Random.Range(0, 100);
     }
 
-    public string AssignSex()
-    {
+    public int AssignID() {
+        return 0;
+    }
+
+    public string AssignSex() {
         int sexInt = Random.Range(0, 2);
-        if (sexInt == 0)
-        {
+        if (sexInt == 0) {
             return "Male";
         }
-        else
-        {
+        else {
             return "Female";
         }
     }
 
-    public string AssignName(string sex)
-    {
+    public string AssignName(string sex) {
 
         string[] maleNames = {"James", "Robert", "John", "Micheal", "William", "David",
     "Richard", "Joseph", "Thomas", "Charles"};
@@ -47,30 +54,17 @@ void Start()
 
         string RandName;
 
-        if (sex == "Male")
-        {
+        if (sex == "Male") {
             RandName = maleNames[Random.Range(0, maleNames.Length)] + " " +
             surnames[Random.Range(0, surnames.Length)];
-
         }
-        else
-        {
+        
+        else{
             RandName = femaleNames[Random.Range(0, femaleNames.Length)] + " " +
             surnames[Random.Range(0, surnames.Length)];
         }
 
         return RandName;
     }
-    public void AssignJob () {
-         
-        int i = Random.Range(0, GameManager.jobs.Length);
 
-        if (GameManager.jobs[i].isAvailable()) {
-            GameManager.jobs[i].increaseCurrent();
-            job = GameManager.jobs[i];
-            JobTitle = GameManager.jobs[i].type;
-        } else {
-            AssignJob();
-        }
-    }
 }
