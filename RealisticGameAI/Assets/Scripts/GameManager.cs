@@ -1,28 +1,44 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
-
-    public NPCManager NPCM;
-    public HouseManager HM;
-
+        
+    public NPCManager npcm;
+    public HouseManager hm;
+    public JobManager jm;
     public Player player;
+    public NavMeshSurface surface;
+
+    public Transform testLocation;
+    
 
     void Awake () {
-        Job.init();
-        NPCM.init();
-        HM.init();
+        
+        jm.init();
+        npcm.init();
+        hm.init();
     }
     
     void Start()
     {
-        HM.createHouses(NPCM.npcs);
+        hm.createHouses(NPCManager.npcList);
+        surface.BuildNavMesh();
+        
+    }   
 
-        //Instantiate(player);
 
+    void Update () {
+
+        if (Input.GetKeyDown("space")) {
+                   foreach (NPC npc in NPCManager.npcList) {
+                       npc.go(npc.workPlace.transform.position);
+                   }
+        }
     }
+
 
 
 

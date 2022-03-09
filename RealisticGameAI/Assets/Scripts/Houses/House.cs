@@ -7,26 +7,22 @@ public class House : MonoBehaviour
     public string road;
     public int number;
     public int capacity;
-    public int occupancy;
+    public List<NPC> Occupants = new List<NPC>();
 
-    void Start() {
-        road = assignRoad();
-        number = assignHouseNumber();
-    }
-    
-    string assignRoad() {
-
-        int i = Random.Range(0, HouseManager.RoadNames.Length);
-
-        return HouseManager.RoadNames[i];
-    } 
-
-    int assignHouseNumber() {
-
-        int i = Random.Range(1, 50);
-        return i;
+    void Awake() {
+        road = this.GetComponentInParent<ResidentialRoad>().RoadName;
+        number = this.GetComponentInParent<HouseSpawnPoint>().spawnPointNumber;
     }
 
+    public void add(NPC npc) {
+        Occupants.Add(npc);
+        npc.house = this;
+    }
+
+    public void remove(NPC npc) {
+        Occupants.Remove(npc);
+        npc.house = null;
+    }
 }
 
 

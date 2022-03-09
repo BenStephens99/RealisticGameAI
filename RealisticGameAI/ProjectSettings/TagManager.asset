@@ -13,14 +13,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Building
+  - Road
+  - Player
+  - NPC
+  - Pavement
+  - Floor
+  - Stairs
   - 
   - 
   - 
