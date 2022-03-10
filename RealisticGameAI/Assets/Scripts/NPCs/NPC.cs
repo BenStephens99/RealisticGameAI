@@ -67,8 +67,8 @@ void Awake()
     }
 
 
-    public void go(Vector3 des) {
-        nPCController.goToDestination(des);
+    public void go(Building des) {
+        nPCController.goToDestination(des.transform.position);
     } 
 
 

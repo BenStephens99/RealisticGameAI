@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorkPlace : MonoBehaviour
+public class WorkPlace : Building
 {
     public List <NPC> workers;
     public int maxNumber;

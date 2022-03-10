@@ -15,10 +15,8 @@ using UnityEngine;
     public bool isAvailable() {
       
         if (currentNumber >= maxNumber) {
-            Debug.Log("false");
             return false;
         } else {
-             Debug.Log("true");
             return true;
         }
 

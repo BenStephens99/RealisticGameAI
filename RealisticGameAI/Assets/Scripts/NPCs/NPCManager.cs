@@ -31,7 +31,7 @@ public class NPCManager : MonoBehaviour
     public static void sendAllNPCsHome(){
        
        foreach (NPC npc in npcList) {
-            npc.go(npc.house.transform.position);
+            npc.go(npc.house);
        }
     }
 

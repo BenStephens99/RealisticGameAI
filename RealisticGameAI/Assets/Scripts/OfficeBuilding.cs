@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCDestinations : MonoBehaviour
+public class OfficeBuilding : WorkPlace
 {
-    
 
+  void Awake(){
+      maxNumber = 9;
+  }
 }

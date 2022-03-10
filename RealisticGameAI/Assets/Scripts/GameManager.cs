@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown("space")) {
                    foreach (NPC npc in NPCManager.npcList) {
-                       npc.go(npc.workPlace.transform.position);
+                       npc.go(npc.workPlace);
                    }
         }
     }
