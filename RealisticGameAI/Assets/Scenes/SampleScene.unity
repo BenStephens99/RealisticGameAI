@@ -868,6 +868,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f52f4f2c859f184497a2503da53985d, type: 3}
+--- !u!1 &374552453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8758769496304003440, guid: 6c3aaa7bf705b96498e9a709ec7669df,
+    type: 3}
+  m_PrefabInstance: {fileID: 651205744404993594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &374552454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374552453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734acc59bcb12f7419eb720e111d2e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcs: []
+  chairs: []
+  max: 0
+  current: 0
 --- !u!1001 &465744162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2617,6 +2639,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5350122764834405483, guid: 915c1ea5b66901242b4a78503cc103cb,
+        type: 3}
+      propertyPath: canCross
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 915c1ea5b66901242b4a78503cc103cb, type: 3}
 --- !u!1001 &1973113049
@@ -2836,7 +2863,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeShop
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4402492170040607997, guid: 6c3aaa7bf705b96498e9a709ec7669df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6c3aaa7bf705b96498e9a709ec7669df, type: 3}
 --- !u!1001 &7578790938115855989
 PrefabInstance:

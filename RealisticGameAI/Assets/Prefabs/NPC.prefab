@@ -228,11 +228,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8437194732483587210}
-  - component: {fileID: 863363492855624256}
+  - component: {fileID: -6541815587341102458}
   - component: {fileID: 3730320822493836699}
+  - component: {fileID: 863363492855624256}
   - component: {fileID: 5145498999490577453}
   - component: {fileID: 1917433527324437893}
-  - component: {fileID: -6541815587341102458}
+  - component: {fileID: 5599299917527977065}
   m_Layer: 12
   m_Name: NPC
   m_TagString: Untagged
@@ -255,27 +256,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863363492855624256
-MonoBehaviour:
+--- !u!54 &-6541815587341102458
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8925514021178545014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f4927e93a89a544aa76b8e6f5c7e0f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fullName: 
-  sex: 
-  age: 0
-  happiness: 0
-  JobTitle: 
-  IdNumber: 0
-  workPlace: {fileID: 0}
-  house: {fileID: 0}
-  nPCController: {fileID: 5145498999490577453}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!195 &3730320822493836699
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -298,6 +294,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &863363492855624256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925514021178545014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4927e93a89a544aa76b8e6f5c7e0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullName: 
+  sex: 
+  age: 0
+  happiness: 0
+  JobTitle: 
+  IdNumber: 0
+  workPlace: {fileID: 0}
+  house: {fileID: 0}
+  nPCController: {fileID: 5145498999490577453}
 --- !u!114 &5145498999490577453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,19 +341,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5642474dd2b74e42a288c79e2eddf50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &-6541815587341102458
-Rigidbody:
+--- !u!114 &5599299917527977065
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8925514021178545014}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fdc9f9389f9d7a4397350fb9f20d403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
