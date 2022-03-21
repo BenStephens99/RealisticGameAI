@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class NPCActions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    NPC npc;
+
+    public Building findClosest() {
+        return JobManager.coffeeShops[1];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Awake(){
+        npc = GetComponent<NPC>();
+    }
+
+    public void getCoffee() {
         
+        foreach(CoffeeShop CoffeeShop in JobManager.coffeeShops){
+
+        }
+    }
+
+    public void sit (Chair chair) {
+        chair.add(npc);
+        npc.controller.goToDestination(chair.transform.position);
+
     }
 }

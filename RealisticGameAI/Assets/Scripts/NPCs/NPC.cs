@@ -10,20 +10,35 @@ public class NPC : MonoBehaviour
     public int happiness;
     public string JobTitle;
     public int IdNumber;
+    public string hand;
 
     public Job job;
     public WorkPlace workPlace;
     public House house;
-    public NPCController nPCController;
+    public NPCController controller;
+    public NPCActions actions;
 
 
 void Awake()
     {
+        controller = GetComponent<NPCController>();
+        actions = GetComponent<NPCActions>();
         IdNumber = AssignID();
         sex = AssignSex();
         age = Random.Range(18, 90);
         fullName = AssignName(sex);
         happiness = Random.Range(0, 100);
+        hand = randomHand();
+    }
+
+    string randomHand() {
+        int i = Random.Range(1, 10);
+       
+       if (i >= 3) {
+           return "right";
+       } else {
+           return "left";
+       }
     }
 
     int AssignID() {
@@ -66,10 +81,6 @@ void Awake()
         return RandName;
     }
 
-
-    public void go(Building des) {
-        nPCController.goToDestination(des.transform.position);
-    } 
 
 
 }

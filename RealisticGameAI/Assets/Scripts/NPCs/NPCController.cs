@@ -52,5 +52,11 @@ public class NPCController : MonoBehaviour
          destination = des;
          agent.SetDestination(destination);
     }
+
+    public void go(Building des) {
+            Debug.Log("Go to Destination " + des);
+         destination = des.transform.position;
+         agent.SetDestination(destination);
+    }
     
 }

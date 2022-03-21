@@ -21,19 +21,18 @@ public class JobManager : MonoBehaviour
     }
 
     public static void AssignRandomJob (NPC npc) {
-          
-        Job job = jobs[lastAssignedJob];
-        
-        if (availableJobs) {
-            if (job.isAvailable()) {
+           
+           if (availableJobs) { 
+                Job job = jobs[lastAssignedJob]; 
+            if (job.isAvailable()) { 
                     job.add(npc);
                     findAvailableWorkPlace(job, npc);
-                    lastAssignedJob++;
-                    jobsChecked = 0;
-                    if (lastAssignedJob > jobs.Length - 1) {
-                        lastAssignedJob = 0;
+                    lastAssignedJob++; 
+                    jobsChecked = 0; 
+                    if (lastAssignedJob > jobs.Length - 1) { 
+                        lastAssignedJob = 0; 
                     }
-                }   else if (jobsChecked < jobs.Length - 1) {
+                }   else if (jobsChecked < jobs.Length - 1) { 
                         Debug.Log("No Available " + job.type);
                         lastAssignedJob++;
                         jobsChecked++;
@@ -72,7 +71,7 @@ public class JobManager : MonoBehaviour
         }
 
            
-        while (!wpFound) {
+        while (!wpFound) { // currently 0(n)
             if (workPlaces[i].hasVacancy()) {
                 wpFound = true;
             } else {

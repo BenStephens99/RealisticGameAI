@@ -9,7 +9,10 @@ public class HouseManager : MonoBehaviour
  public ResidentialRoad[] roads;
  public static List<House> houses = new List<House>();
  int availableSpawnPoints;
- int lastRoadName = 0;
+ int roadStart = 0;
+ int roadEnd = 0;
+
+
  
     public void init () {
 
@@ -25,10 +28,15 @@ public class HouseManager : MonoBehaviour
     string AssignRoadName() {
         string RoadName;
 
-        string[] RoadNames = {"Park Lane", "Regent Street", "Oxford Street", "Pall Mall"};
+        string[] RoadStarts = {"First", "Second", "Third", "Fourth", "Fith", "Sixth", "Seventh", "Eighth"};
+        string [] RoadEnds = {"Street", "Lane", "Park", "Drive", "Avenue", "Road"};
 
-        RoadName = RoadNames[lastRoadName];
-        lastRoadName += 1;
+       RoadName = RoadStarts[roadStart] + " " + RoadEnds[roadEnd];
+       roadStart++;
+       if (roadStart > RoadStarts.Length -1) {
+           roadEnd++;
+           roadStart = 0;
+       }
 
         return RoadName;
     }

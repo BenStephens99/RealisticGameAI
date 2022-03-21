@@ -6,7 +6,7 @@ public class NPCManager : MonoBehaviour
 {
     public int numOfNpcs;
     public NPC npcPrefab;
-    public static List<NPC> npcList = new List<NPC> ();
+    public List<NPC> npcList = new List<NPC> ();
 
     public void init () {
         createNPCs(numOfNpcs); 
@@ -21,17 +21,18 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    public static void assignRandomJobs() {
+    public  void assignRandomJobs() {
             
          foreach (NPC npc in npcList) {
             JobManager.AssignRandomJob(npc);
         }
     }
 
-    public static void sendAllNPCsHome(){
+    public void sendAllNPCsHome(){
        
        foreach (NPC npc in npcList) {
-            npc.go(npc.house);
+           Debug.Log (npc.house.transform.position +  " " + npc.transform.position); 
+            npc.transform.position = npc.house.transform.position;
        }
     }
 

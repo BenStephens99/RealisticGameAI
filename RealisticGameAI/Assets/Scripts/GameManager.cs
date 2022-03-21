@@ -11,9 +11,7 @@ public class GameManager : MonoBehaviour
     public JobManager jm;
     public Player player;
     public NavMeshSurface surface;
-
     public Transform testLocation;
-    
 
     void Awake () {
         
@@ -24,7 +22,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        hm.createHouses(NPCManager.npcList);
+        hm.createHouses(npcm.npcList);
         surface.BuildNavMesh();
         
     }   
@@ -32,9 +30,16 @@ public class GameManager : MonoBehaviour
 
     void Update () {
 
+        if (Input.GetKeyDown("e")) {
+            npcm.sendAllNPCsHome();
+        }
+
         if (Input.GetKeyDown("space")) {
-                   foreach (NPC npc in NPCManager.npcList) {
-                       npc.go(npc.workPlace);
+                   foreach (NPC npc in npcm.npcList) {
+                       if (npc.job != null) {
+                           npc.controller.go(npc.workPlace);
+                       } else npc.controller.go(npc.house);
+                       
                    }
         }
     }

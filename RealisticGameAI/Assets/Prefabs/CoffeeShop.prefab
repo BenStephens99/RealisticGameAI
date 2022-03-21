@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2532327751919342338}
   - component: {fileID: 2641655550855383761}
   - component: {fileID: 2496497825923811769}
+  - component: {fileID: 1546710009568484890}
   m_Layer: 0
   m_Name: Counter
   m_TagString: Untagged
@@ -93,6 +94,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &1546710009568484890
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43707733128928624}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1217217126405881533
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3213673428097814669}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 10.5, z: 0}
+  m_LocalPosition: {x: -0, y: 10.5, z: -0.06}
   m_LocalScale: {x: 32, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 3452095373333203916}
@@ -1693,6 +1710,7 @@ GameObject:
   - component: {fileID: 3437378695978579518}
   - component: {fileID: 5747998799234064533}
   - component: {fileID: 4152284639513872653}
+  - component: {fileID: 6122804781375460789}
   m_Layer: 0
   m_Name: Serving Counter
   m_TagString: Untagged
@@ -1774,6 +1792,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &6122804781375460789
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273326872257772283}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6283676613464164149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,7 +2385,7 @@ PrefabInstance:
     - target: {fileID: 3046677702883106930, guid: b6e0a3872df27b249b470eb66e91b8fc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3046677702883106930, guid: b6e0a3872df27b249b470eb66e91b8fc,
         type: 3}
@@ -2426,7 +2460,7 @@ PrefabInstance:
     - target: {fileID: 3046677702883106930, guid: b6e0a3872df27b249b470eb66e91b8fc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3046677702883106930, guid: b6e0a3872df27b249b470eb66e91b8fc,
         type: 3}
@@ -2501,7 +2535,7 @@ PrefabInstance:
     - target: {fileID: 3046677702883106930, guid: b6e0a3872df27b249b470eb66e91b8fc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3046677702883106930, guid: b6e0a3872df27b249b470eb66e91b8fc,
         type: 3}

@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4553279612639451198}
   - component: {fileID: 9220662259474986121}
+  - component: {fileID: 457104235520034182}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -231,3 +232,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b4d5978036df1488c9e9d5191ecfef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  occupied: 0
+  npc: {fileID: 0}
+--- !u!208 &457104235520034182
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553279612639451199}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
