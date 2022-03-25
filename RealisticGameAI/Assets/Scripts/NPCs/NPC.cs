@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
+using System.Text;
 
 public class NPC : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class NPC : MonoBehaviour
     public NPCActions actions;
 
     [DllImport("AIEngine.dll")]
-    private static extern int SubtractNumbers(int a, int b);
+    [return: MarshalAs(UnmanagedType.BStr)]
+    private static extern string talk(int a);
+
+  
 
 void Awake()
     {
@@ -40,12 +44,11 @@ void Awake()
         hand = randomHand();
     }
 
-    public int updateState (int a, int b) {
+    public void updateState (int a, int b) {
 
-        int c = SubtractNumbers (a,b); 
+        string c = talk (a); 
 
-        Debug.Log (c);
-        return c;
+        Debug.Log(c);
     }
 
     string randomHand() { 

@@ -6,3 +6,8 @@
 		return a * b;
 	}
 
+	 std::string Actions::talk()
+	 {
+		 return "Hello";
+	 }
+

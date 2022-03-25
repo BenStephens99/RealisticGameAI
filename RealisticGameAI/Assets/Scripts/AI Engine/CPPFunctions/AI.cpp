@@ -1,4 +1,5 @@
 #include "AI.h"
+#include <comdef.h>
 #pragma once
 #define MyFunctions _declspec(dllexport)
 
@@ -15,24 +16,17 @@ MyFunctions int SubtractNumbers(int a, int b)
 		return a;
 	}
 
-MyFunctions int AddNumbers(int a, int b)
+MyFunctions BSTR talk(int a)
 	{
-		return a;
-	}
+		return SysAllocString(L"Ben");
+	} 
 
 MyFunctions int init(int a, int b)
 	{
 
-	initInteractions();
+	return a + b;
 
 	}
 }
 
-void initInteractions() {
-
-	static Interaction* greeting = new Interaction({ "Hi! How are you?", "Hello! Whats up?", "Hey! How you doing?" },
-		{ "Hi", "Hello", "Hey" },
-		{ "Oh It's you", "Go Away", "Ughh" });
-
-}
 

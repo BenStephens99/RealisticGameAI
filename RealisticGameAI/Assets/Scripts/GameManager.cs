@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown("e")) {
            foreach (NPC npc in npcm.npcList) {
-               npc.updateState(npc.happiness, 10);
+               npc.updateState(2, 5);
            }
         }
 

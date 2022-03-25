@@ -21,12 +21,24 @@
     <ClInclude Include="Actions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Conversation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Interaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Actions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Conversation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Interaction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

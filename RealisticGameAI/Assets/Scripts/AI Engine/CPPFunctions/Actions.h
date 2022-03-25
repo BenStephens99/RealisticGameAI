@@ -1,5 +1,7 @@
 #pragma once
 #include "AI.h"
+#include <string>
+#include <iostream>
 
 class Actions {
 

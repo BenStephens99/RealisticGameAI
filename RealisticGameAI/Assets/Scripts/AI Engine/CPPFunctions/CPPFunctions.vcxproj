@@ -142,10 +142,14 @@
   <ItemGroup>
     <ClInclude Include="Actions.h" />
     <ClInclude Include="AI.h" />
+    <ClInclude Include="Conversation.h" />
+    <ClInclude Include="Interaction.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Actions.cpp" />
     <ClCompile Include="AI.cpp" />
+    <ClCompile Include="Conversation.cpp" />
+    <ClCompile Include="Interaction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
