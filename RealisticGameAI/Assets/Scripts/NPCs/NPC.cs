@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class NPC : MonoBehaviour
 {
+
+
     public string fullName;  
     public string sex;
     public int age;
@@ -15,9 +18,15 @@ public class NPC : MonoBehaviour
     public Job job;
     public WorkPlace workPlace;
     public House house;
+
+    [HideInInspector]
     public NPCController controller;
+
+    [HideInInspector]
     public NPCActions actions;
 
+    [DllImport("AIEngine.dll")]
+    private static extern int SubtractNumbers(int a, int b);
 
 void Awake()
     {
@@ -31,13 +40,21 @@ void Awake()
         hand = randomHand();
     }
 
-    string randomHand() {
-        int i = Random.Range(1, 10);
+    public int updateState (int a, int b) {
+
+        int c = SubtractNumbers (a,b); 
+
+        Debug.Log (c);
+        return c;
+    }
+
+    string randomHand() { 
+        int i = Random.Range(1, 11);
        
        if (i >= 3) {
-           return "right";
+           return "Right";
        } else {
-           return "left";
+           return "Left";
        }
     }
 
