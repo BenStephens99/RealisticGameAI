@@ -14,7 +14,8 @@ public class NPC : MonoBehaviour
     public int happiness;
     public string JobTitle;
     public int IdNumber;
-    public string hand;
+    public string hand; 
+    public string state;
 
     public Job job;
     public WorkPlace workPlace;

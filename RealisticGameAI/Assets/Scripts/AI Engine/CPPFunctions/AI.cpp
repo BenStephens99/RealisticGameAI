@@ -12,19 +12,22 @@ extern "C" {
 	} _npcDetails;
 
 MyFunctions int SubtractNumbers(int a, int b)
-	{
-		return a;
+	{	
+
+		int c = a - b;
+		return 100;
 	}
 
 MyFunctions BSTR talk(int a)
 	{
-		return SysAllocString(L"Ben");
+
+		return SysAllocString(_bstr_t(Conversation::beginConversation(a).c_str()).Detach());
 	} 
 
 MyFunctions int init(int a, int b)
 	{
 
-	return a + b;
+	return a * b;
 
 	}
 }

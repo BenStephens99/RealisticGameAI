@@ -2,6 +2,8 @@
 #include "Interaction.h"
 #include <string>
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 
 class Conversation
 {
@@ -10,7 +12,8 @@ public:
 	static Interaction* fairwell;
 
 
-	static const char* beginConversation(int);
+	static std::string beginConversation(int);
 	static int randNum(int a, int b);
+	void Tree();
 };
 
