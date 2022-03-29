@@ -7,3 +7,5 @@ Interaction::Interaction(std::array<std::string, 3> f, std::array<std::string, 3
 	unfriendly = u;
 }
 
+
+
