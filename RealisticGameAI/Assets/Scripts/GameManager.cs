@@ -37,12 +37,6 @@ public class GameManager : MonoBehaviour
            }
         }
 
-           if (Input.GetKeyDown("f")) {
-           foreach (NPC npc in npcm.npcList) {
-               npc.testDLL(2);
-           }
-        }
-
         if (Input.GetKeyDown("space")) {
                    foreach (NPC npc in npcm.npcList) {
                        npc.stateMachine.changeState(StateMachine.moving);

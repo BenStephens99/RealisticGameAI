@@ -13,7 +13,7 @@ public class NPC : MonoBehaviour
     public int age;
     public int happiness;
     public string JobTitle;
-    public int IdNumber;
+    public int idNumber;
     public string hand; 
     public string state;
     public StateMachine stateMachine;
@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour
 
     [DllImport("Engine.dll")]
     [return: MarshalAs(UnmanagedType.BStr)]
-    private static extern string talk(int a);
+    private static extern void init(int id, string name);
 
   
 
@@ -38,7 +38,6 @@ void Awake()
     {
         controller = GetComponent<NPCController>();
         actions = GetComponent<NPCActions>();
-        IdNumber = AssignID();
         sex = AssignSex();
         age = Random.Range(18, 30);
         fullName = AssignName(sex);
@@ -48,12 +47,10 @@ void Awake()
         state = "";
     }
 
-    public void testDLL (int a) {
-
-        string c = talk (a); 
-
-        Debug.Log(c);
+    void Start() {
+        init(idNumber, fullName);
     }
+
 
     string randomHand() { 
         int i = Random.Range(1, 11);
@@ -63,10 +60,6 @@ void Awake()
        } else {
            return "Left";
        }
-    }
-
-    int AssignID() {
-        return 0;
     }
 
     string AssignSex() {

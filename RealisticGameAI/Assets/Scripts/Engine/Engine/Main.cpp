@@ -34,14 +34,6 @@ extern "C" {
 
 	MyFunctions BSTR beginInteraction(int id) {
 
-		if (npc != NULL) {
-			if (npc->idNum == id) {
-				return toStr("Continue Conversation " + npc->name);
-			}
-		}
-
-
-		if (npc != NULL) {
 			if (npc->idNum != id) {
 				npc = Tree.search(id);
 				if (npc == NULL) {
@@ -56,13 +48,14 @@ extern "C" {
 				}
 			}
 			else {
-				return toStr("Hows it going");
+				return toStr("Hows it going " + npc->name);
 			}
-		}
 	}
 
-	MyFunctions void firstMeet(const char* name) {
+	MyFunctions BSTR firstMeet(const char* name) {
 		npc->addName(name);
+
+		return toStr("Nice to meet you " + npc->name);
 	}
 
 

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class JobManager : MonoBehaviour
 {
-    public static Job[] jobs = new Job[2];
+    public static Job[] jobs = new Job[3];
     public static CoffeeShop[] coffeeShops;
     public static OfficeBuilding[] officeBuildings;
+    public static ItemShop[] itemShops;
     static int lastAssignedJob = 0;
     static int jobsChecked = 0;
     static bool availableJobs = true;
@@ -15,21 +16,24 @@ public class JobManager : MonoBehaviour
 
        coffeeShops = FindObjectsOfType<CoffeeShop>();
        officeBuildings = FindObjectsOfType<OfficeBuilding>();
+       itemShops = FindObjectsOfType<ItemShop>();
 
         jobs [0] = new Job("Barista", coffeeShops.Length * 2);
         jobs [1] = new Job("Office", officeBuildings.Length * 9);
+        jobs [2] = new Job("Merchant", itemShops.Length * 1);
     }
 
     public static void AssignRandomJob (NPC npc) {
            
            if (availableJobs) { 
                 Job job = jobs[lastAssignedJob]; 
-            if (job.isAvailable()) { 
+                if (job.isAvailable()) { 
                     job.add(npc);
                     findAvailableWorkPlace(job, npc);
                     lastAssignedJob++; 
+                    Debug.Log("LAJ " + lastAssignedJob );
                     jobsChecked = 0; 
-                    if (lastAssignedJob > jobs.Length - 1) { 
+                    if (lastAssignedJob >= jobs.Length - 1) { 
                         lastAssignedJob = 0; 
                     }
                 }   else if (jobsChecked < jobs.Length - 1) { 
@@ -65,13 +69,17 @@ public class JobManager : MonoBehaviour
             workPlaces = officeBuildings;
             break;
 
+            case "Merchant":
+            workPlaces = itemShops;
+            break;
+
             default: 
             workPlaces = null;
             break;
         }
 
            
-        while (!wpFound) { // currently 0(n)
+        while (!wpFound) { // currently O(n)
             if (workPlaces[i].hasVacancy()) {
                 wpFound = true;
             } else {

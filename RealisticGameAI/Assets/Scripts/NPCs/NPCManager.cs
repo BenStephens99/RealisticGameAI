@@ -16,37 +16,23 @@ public class NPCManager : MonoBehaviour
     public void createNPCs(int num)
     {
          for (int v = 0; v <= (num - 1); v++) {
-             
             npcList.Add(Instantiate(npcPrefab, new Vector3(-75, 0, 0), Quaternion.identity));
+            npcPrefab.idNumber = v+1;
+            Debug.Log(v+1);
         }
     }
 
     public  void assignRandomJobs() {
-            
          foreach (NPC npc in npcList) {
             JobManager.AssignRandomJob(npc);
         }
     }
 
     public void sendAllNPCsHome(){
-       
        foreach (NPC npc in npcList) {
            Debug.Log (npc.house.transform.position +  " " + npc.transform.position); 
             npc.transform.position = npc.house.transform.position;
        }
-    }
-
-    
-    public static void assignJob (Job job, NPC npc) {
-        /*if (job.isAvailable()) {
-            job.increaseCurrent();
-            npc.job = job;
-            npc.JobTitle = job.type;
-        } else {
-            Debug.Log("Failed to assign job: " + job.type + " to " + npc.fullName);
-        }*/
-
-        Debug.Log("Failed to assign job: " + job.type + " to " + npc.fullName);
     }
 
     public static void removeJob (NPC npc) {
@@ -54,6 +40,7 @@ public class NPCManager : MonoBehaviour
         npc.JobTitle = "Unemployed";
     }
     
+
 
 }
 

@@ -7,7 +7,7 @@ public class WorkPlace : Building
     public List <NPC> workers;
     public int maxNumber;
 
-    public void add(NPC npc) {
+    virtual public void add(NPC npc) {
         if (hasVacancy()){
             workers.Add(npc);
             npc.workPlace = this;
@@ -16,7 +16,7 @@ public class WorkPlace : Building
         }
     }
 
-    public bool hasVacancy(){
+    virtual public bool hasVacancy(){
         if (workers.Count < maxNumber) {
             return true;
         } else {
