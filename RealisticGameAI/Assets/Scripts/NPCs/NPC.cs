@@ -81,7 +81,7 @@ void Awake()
                                 "Barbara", "Susan", "Jessica", "Sarah", "Karen"};
 
         string[] surnames = {"Brown", "Johnson", "Jones", "Green", "Smith", "Williams",
-                                "Evans", "Walker", "Green", "Wood"};
+                                "Evans", "Walker", "Davies", "Wood"};
 
         string RandName;
 

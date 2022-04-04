@@ -30,38 +30,28 @@ extern "C" {
 		me.name = name;
 	}
 
-	MyFunctions BSTR talk(int a)
-	{
-		std::string t = "hello";
-
-		return toStr(t);
+	MyFunctions BSTR getInteractedWith(int id) {
+		
 	}
-
 
 	MyFunctions BSTR beginInteraction(int id) {
 
-			if (npc->idNum != id) {
-				npc = Tree.search(id);
-				if (npc == NULL) {
-					NPC* newNPC = new NPC(id);
-					Tree.insert(newNPC);
-					npc = newNPC;
-					return toStr("What is your name?");
-				}
-				else {
-					std::string n = npc->name;
-					return toStr("Hi " + n);
-				}
+		if (npc->idNum != id) {
+			npc = Tree.search(id);
+			if (npc == NULL) {
+				NPC* newNPC = new NPC(id);
+				Tree.insert(newNPC);
+				npc = newNPC;
+				return toStr("What is your name?");
 			}
 			else {
-				return toStr("Hows it going " + npc->name);
+				std::string n = npc->name;
+				return toStr("Hi " + n);
 			}
-	}
-
-	MyFunctions BSTR firstMeet(const char* name) {
-		npc->addName(name);
-
-		return toStr("Nice to meet you " + npc->name);
+		}
+		else {
+			return toStr("Hows it going " + npc->name);
+		}
 	}
 
 
