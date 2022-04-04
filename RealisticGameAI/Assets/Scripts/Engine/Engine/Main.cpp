@@ -4,7 +4,14 @@
 
 BST Tree;
 NPC* npc;
-int idNum;
+
+struct details {
+public:
+	int idNum=0;
+	std::string job;
+	std::string name;
+}me;
+
 
 extern "C" {
 
@@ -13,20 +20,19 @@ extern "C" {
 		return SysAllocString(_bstr_t(str.c_str()).Detach());
 	}
 
-	MyFunctions void init(int id, const char* name) {
+	MyFunctions void init(int id, const char* name, const char* job) {
 		npc = new NPC(id);
 		npc->addName(name);
-		idNum = id;
 		Tree.insert(npc);
+
+		me.idNum = id;
+		me.job = job;
+		me.name = name;
 	}
 
 	MyFunctions BSTR talk(int a)
 	{
 		std::string t = "hello";
-
-		//NPC* newNPC = new NPC(5);
-
-		//Tree.insert(newNPC);
 
 		return toStr(t);
 	}
