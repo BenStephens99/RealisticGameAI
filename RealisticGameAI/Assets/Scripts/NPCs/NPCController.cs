@@ -46,14 +46,19 @@ public class NPCController : MonoBehaviour
         } 
 
     }
+
     public void goToDestination(Vector3 des) {
          destination = des;
-         agent.SetDestination(destination);
+         agent.SetDestination(destination); 
     }
 
-    public void go(Building des) {
-         destination = des.transform.position;
-         agent.SetDestination(destination);
+    public void go() {
+        agent.isStopped = false;
+        agent.SetDestination(destination);
+    }
+
+    public void stop() {
+        agent.isStopped = true;
     }
     
 }

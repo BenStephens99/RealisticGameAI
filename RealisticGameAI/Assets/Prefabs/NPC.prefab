@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 863363492855624256}
   - component: {fileID: 7089125516078657013}
   - component: {fileID: 2653427000452223025}
-  - component: {fileID: 2087307929281353872}
+  - component: {fileID: 3311159750564248962}
   m_Layer: 12
   m_Name: NPC
   m_TagString: Untagged
@@ -503,6 +503,7 @@ MonoBehaviour:
   JobTitle: 
   IdNumber: 0
   hand: 
+  stateMachine: {fileID: 3311159750564248962}
   workPlace: {fileID: 0}
   house: {fileID: 0}
   controller: {fileID: 0}
@@ -533,22 +534,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdc9f9389f9d7a4397350fb9f20d403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &2087307929281353872
-Animator:
-  serializedVersion: 3
+--- !u!114 &3311159750564248962
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8925514021178545014}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3da9e834f6d015e44a77b4e71bf5c47e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e2762c6c05c24448ef964e37f5adc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 863363492855624256}

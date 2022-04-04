@@ -16,6 +16,7 @@ public class NPC : MonoBehaviour
     public int IdNumber;
     public string hand; 
     public string state;
+    public StateMachine stateMachine;
 
     public Job job;
     public WorkPlace workPlace;
@@ -27,7 +28,7 @@ public class NPC : MonoBehaviour
     [HideInInspector]
     public NPCActions actions;
 
-    [DllImport("AIEngine.dll")]
+    [DllImport("Engine.dll")]
     [return: MarshalAs(UnmanagedType.BStr)]
     private static extern string talk(int a);
 
@@ -39,13 +40,15 @@ void Awake()
         actions = GetComponent<NPCActions>();
         IdNumber = AssignID();
         sex = AssignSex();
-        age = Random.Range(18, 90);
+        age = Random.Range(18, 30);
         fullName = AssignName(sex);
         happiness = Random.Range(0, 100);
         hand = randomHand();
+        stateMachine = GetComponent<StateMachine>();
+        state = "";
     }
 
-    public void updateState (int a, int b) {
+    public void testDLL (int a) {
 
         string c = talk (a); 
 

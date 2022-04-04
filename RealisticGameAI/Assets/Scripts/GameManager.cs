@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public Transform testLocation;
 
 
-
     void Awake () {
         
         jm.init();
@@ -28,31 +27,29 @@ public class GameManager : MonoBehaviour
     {
         hm.createHouses(npcm.npcList);
         surface.BuildNavMesh();
-      
     }   
-
 
     void Update () {
 
         if (Input.GetKeyDown("e")) {
            foreach (NPC npc in npcm.npcList) {
-               npc.updateState(2, 5);
+               npc.controller.destination = npc.house.transform.position;
+           }
+        }
+
+           if (Input.GetKeyDown("f")) {
+           foreach (NPC npc in npcm.npcList) {
+               npc.testDLL(2);
            }
         }
 
         if (Input.GetKeyDown("space")) {
                    foreach (NPC npc in npcm.npcList) {
-                       if (npc.job != null) {
-                           npc.controller.go(npc.workPlace);
-                       } else npc.controller.go(npc.house);
-                       
+                       npc.stateMachine.changeState(StateMachine.moving);
                    }
         }
+        
     }
-
-
-
-
 }
 
 
