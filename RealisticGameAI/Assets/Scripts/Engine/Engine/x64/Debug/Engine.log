@@ -1,5 +1,13 @@
 ﻿  BST.cpp
   Main.cpp
+  Me.cpp
+  NN.cpp
+C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(16,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(18,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(20,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(22,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(24,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(30,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NPC.cpp
   Generating Code...
      Creating library C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\x64\Debug\Engine.lib and object C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\x64\Debug\Engine.exp

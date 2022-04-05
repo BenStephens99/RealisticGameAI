@@ -3,7 +3,7 @@
 
 NPC::NPC(int id) {
 	idNum = id;
-	name = "";
+	name = "No Name";
 	relationship = 50;
 
 	left = NULL;

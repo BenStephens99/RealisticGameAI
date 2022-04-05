@@ -9,6 +9,7 @@ public:
 
 	int idNum;
 	std::string name;
+	std::string sex;
 	int relationship;
 
 	NPC* left;
