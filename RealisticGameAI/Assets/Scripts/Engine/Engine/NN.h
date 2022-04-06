@@ -2,6 +2,10 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <array>
+#include <math.h>
+#include "Me.h"
+#include "Interact.h"
 
 class NN
 {
@@ -9,43 +13,45 @@ public:
 	class Input
 	{
 	public:
-		float weight;
+		double value;
 
 		Input(float);
 		Input();
 	};
 
-	Input* NPCKnown;
-	Input* npcLikeness;
-	Input* npcSex;
-	Input* chatFriendliness;
-	Input* chatLevel;
-	Input* myState;
-	Input* myHappiness;
-	Input* hasTime;
+	 Input* chatLevel;
+	 Input* NPCKnown;
+	 Input* npcLikeness;
+	 Input* npcSex;
+	 Input* chatFriendliness; 
+	 Input* myState;
+	 Input* myHappiness;
 
-	class Neuron {
-	public:
-		bool activated;
-		std::vector<Input*> inputs;
+	 class Neuron {
+	 public:
+		 bool activated;
+		 std::array <double, 7> inputWeights;
 
+		 Neuron(std::array <double, 7>);
 	};
 
-	Neuron* isBusy;
-	Neuron* isFriend;
-	Neuron* chatNeuron;
+	 Neuron* isNotBusy;
+	 Neuron* isFriend;
 
-	Input* inputLayor[8];
-	Neuron* hiddenLayor[4];
+	 std::array <Neuron*, 2> hiddenLayor;
 
-	void start(int known, int rel, const char* sex, int chatF, int chatL, int time);
+	void init();
 
-	int compareSex(std::string sex);
+	void start(Me* me, float known, float rel, const char* sex, float chatF, float chatL);
+
+	float compareSex(const char*, const char*);
 
 	int calculateState(std::string);
 
-	void feedFoward(Input* inputs[]);
+	void feedFoward(std::array <Input*, 7>);
 
+	double testFunction(double);
 	
+	std::string getOutput(std::array <Neuron*, 2> HL);
 };
 

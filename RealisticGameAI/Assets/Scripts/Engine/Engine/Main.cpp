@@ -18,24 +18,26 @@ extern "C" {
 		Main::npc = new NPC(id);
 		Main::npc->addName(name);
 		Main::Tree.insert(Main::npc);
-
 		Main::me->print();
+		Main::nn.init();
 	}
 
 	
-	MyFunctions BSTR getInteractedWith(int id, int messageFriendliness, int messageLevel, int worldTime) {
+	MyFunctions BSTR getInteractedWith(int id, int messageFriendliness, int messageLevel, const char* state) {
+		std::string output;
+		
+		Main::me->state = state;
+
 		Main::npc = Main::Tree.search(id);
-		std::string sex;
+		
 		if (Main::npc == NULL) {
-			Main::nn.start(0, 50, sex.c_str(), messageFriendliness, messageLevel, worldTime);
+			Main::nn.start(Main::me, 0, 50, 0, messageFriendliness, messageLevel);
 		}
 		else {
-			Main::nn.start(1, Main::npc->relationship, Main::npc->sex.c_str(), messageFriendliness, messageLevel, worldTime);
+			Main::nn.start(Main::me, 1, Main::npc->relationship, Main::npc->sex.c_str(), messageFriendliness, messageLevel);
 		}
 
-		
-
-		return 0;
+		return toStr(output);
 	}
 
 	MyFunctions BSTR beginInteraction(int id) {
@@ -58,5 +60,9 @@ extern "C" {
 		}
 	}
 	
+	MyFunctions BSTR testFunction(double d) {
+		std::cout << Main::nn.testFunction(d);
+		return toStr("Test function");
+	}
 
 }
