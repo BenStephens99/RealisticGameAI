@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 621303568982754212}
   - component: {fileID: 5520210144221135615}
   - component: {fileID: 6001282348708535256}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,14 +52,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &6001282348708535256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105,7 +108,7 @@ GameObject:
   - component: {fileID: 3482842024283627158}
   - component: {fileID: 3156287694657558130}
   - component: {fileID: 5184652499548299893}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,14 +148,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,6 +178,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &5184652499548299893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -198,7 +204,7 @@ GameObject:
   - component: {fileID: 4583015496304968714}
   - component: {fileID: 8942838911521309203}
   - component: {fileID: 7528561813107047180}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,14 +244,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -266,6 +274,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7528561813107047180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -291,7 +300,7 @@ GameObject:
   - component: {fileID: 1504688612854174720}
   - component: {fileID: 2673792679908851698}
   - component: {fileID: 7657066211068187891}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,14 +340,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -359,6 +370,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7657066211068187891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -384,7 +396,7 @@ GameObject:
   - component: {fileID: 7493188995275962695}
   - component: {fileID: 7259452178052221046}
   - component: {fileID: 7249537534056154406}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,14 +436,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -452,6 +466,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7249537534056154406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -477,7 +492,7 @@ GameObject:
   - component: {fileID: 5253584990638340537}
   - component: {fileID: 2903255524155439155}
   - component: {fileID: 3472175176600835049}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,14 +532,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -545,6 +562,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &3472175176600835049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -570,7 +588,7 @@ GameObject:
   - component: {fileID: 5998874227028910733}
   - component: {fileID: 5414231412576607806}
   - component: {fileID: 2691173447393046360}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,14 +628,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -638,6 +658,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2691173447393046360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -663,7 +684,7 @@ GameObject:
   - component: {fileID: 46276851984007038}
   - component: {fileID: 6777767093629376206}
   - component: {fileID: 808192228790351890}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,14 +724,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -731,6 +754,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &808192228790351890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -753,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734361525481472972}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stairs Left Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +822,7 @@ GameObject:
   - component: {fileID: 449982960269234842}
   - component: {fileID: 779371351211743367}
   - component: {fileID: 8104881115717895856}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,14 +862,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -866,6 +892,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &8104881115717895856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -891,7 +918,7 @@ GameObject:
   - component: {fileID: 1251004545428508985}
   - component: {fileID: 4699924349007721449}
   - component: {fileID: 7324549130134945725}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,14 +958,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -959,6 +988,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7324549130134945725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -984,7 +1014,7 @@ GameObject:
   - component: {fileID: 8599815254846819370}
   - component: {fileID: 7323910237442555648}
   - component: {fileID: 5615153864831865394}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,14 +1054,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1052,6 +1084,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &5615153864831865394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1077,7 +1110,7 @@ GameObject:
   - component: {fileID: 1096207120951911111}
   - component: {fileID: 5474748453481211676}
   - component: {fileID: 2714590308701272417}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,14 +1150,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ec518cc32a574849a89c18b1b08fce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1145,6 +1180,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2714590308701272417
 BoxCollider:
   m_ObjectHideFlags: 0

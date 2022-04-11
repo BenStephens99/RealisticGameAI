@@ -33,7 +33,24 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown("e")) {
            foreach (NPC npc in npcm.npcList) {
-               npc.controller.destination = npc.house.transform.position;
+               if (npc.workPlace != null) {
+                   npc.controller.destination = npc.workPlace.transform.position;
+               } else {
+                   npc.controller.destination = npc.house.transform.position;
+               }
+               
+           }
+        }
+
+        
+        if (Input.GetKeyDown("f")) {
+           foreach (NPC npc in npcm.npcList) {
+               if (npc.workPos != null) {
+                   npc.controller.destination = npc.workPos.transform.position;
+               } else {
+                   npc.controller.destination = npc.house.transform.position;
+               }
+               
            }
         }
 

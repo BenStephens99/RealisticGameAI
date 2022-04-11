@@ -21,12 +21,14 @@ public class NPC : MonoBehaviour
     public Job job;
     public WorkPlace workPlace;
     public House house;
+    public Transform workPos;
 
     [HideInInspector]
     public NPCController controller;
 
     [HideInInspector]
     public NPCActions actions;
+    private IntelligentAgent Agent;
 
     [DllImport("Engine.dll")]
     [return: MarshalAs(UnmanagedType.BStr)]
@@ -38,6 +40,7 @@ void Awake()
     {
         controller = GetComponent<NPCController>();
         actions = GetComponent<NPCActions>();
+        Agent = GetComponent<IntelligentAgent>();
         sex = AssignSex();
         age = Random.Range(18, 30);
         fullName = AssignName(sex);
@@ -48,9 +51,8 @@ void Awake()
     }
 
     void Start() {
-        init(idNumber, fullName);
+        //init(idNumber, fullName);
     }
-
 
     string randomHand() { 
         int i = Random.Range(1, 11);
