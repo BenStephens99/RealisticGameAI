@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class WorkingPos : MonoBehaviour
 {
-     NPC npc;
-    bool occupied;
+    public NPC npc;
+    public bool occupied = false;
+
+    public virtual void add(NPC n) {
+        npc = n;
+        occupied = true;
+        npc.workPos = this;
+    }
 }
+ 

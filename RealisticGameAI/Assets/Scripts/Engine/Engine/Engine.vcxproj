@@ -141,20 +141,27 @@
   <ItemGroup>
     <ClInclude Include="BST.h" />
     <ClInclude Include="Chat.h" />
-    <ClInclude Include="Interact.h" />
+    <ClInclude Include="DecisionTree.h" />
+    <ClInclude Include="DT.h" />
+    <ClInclude Include="InteractTree.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Me.h" />
-    <ClInclude Include="NN.h" />
     <ClInclude Include="NPC.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="walkPastTree.h" />
+    <ClInclude Include="workingTree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BST.cpp" />
     <ClCompile Include="Chat.cpp" />
-    <ClCompile Include="Interact.cpp" />
+    <ClCompile Include="DecisionTree.cpp" />
+    <ClCompile Include="DT.cpp" />
+    <ClCompile Include="InteractTree.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Me.cpp" />
-    <ClCompile Include="NN.cpp" />
     <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="walkPastTree.cpp" />
+    <ClCompile Include="workingTree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

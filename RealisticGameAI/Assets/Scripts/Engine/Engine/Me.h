@@ -2,29 +2,18 @@
 #include <string>
 #include <iostream>
 
-class Job {
-public:
-	std::string name;
-
-	int start;
-	int end;
-	int days[7];
-};
-
 class Me {
 public:
-	Me(int, const char*, const char*, int, int, int[7]);
+	
+	Me(std::string name, int id);
 
-	Me();
-
-	int idNum;
 	std::string name;
-	std::string state = "Idle";
-	Job job;
-	int friendliness;
-	std::string sex;
+	int id; 
+	std::string currentState;
 
 	void print();
+
+	void updateState(std::string);
 	
 };
 

@@ -1,57 +1,64 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class JobManager : MonoBehaviour
 {
-    public static Job[] jobs = new Job[3];
+
+    public static Job[] jobs;
     public static CoffeeShop[] coffeeShops;
     public static OfficeBuilding[] officeBuildings;
     public static ItemShop[] itemShops;
+    
+
+
+    static Barista barista;
+    static Merchant merchant;
+    static Office office;
+
     static int lastAssignedJob = 0;
     static int jobsChecked = 0;
     static bool availableJobs = true;
 
     public void init () {
 
-       coffeeShops = FindObjectsOfType<CoffeeShop>();
-       officeBuildings = FindObjectsOfType<OfficeBuilding>();
-       itemShops = FindObjectsOfType<ItemShop>();
+        coffeeShops = FindObjectsOfType<CoffeeShop>();
+        officeBuildings = FindObjectsOfType<OfficeBuilding>();
+        itemShops = FindObjectsOfType<ItemShop>();
 
-        jobs [0] = new Job("Barista", coffeeShops.Length * 2);
-        jobs [1] = new Job("Office", officeBuildings.Length * 9);
-        jobs [2] = new Job("Merchant", itemShops.Length * 1);
+        barista = new Barista();
+        merchant = new Merchant();
+        office = new Office();
+    
+        jobs = new Job[] {barista, merchant, office};
+
     }
 
     public static void AssignRandomJob (NPC npc) {
-           
-           if (availableJobs) { 
-                Job job = jobs[lastAssignedJob]; 
-                if (job.isAvailable()) { 
-                    job.add(npc);
-                    findAvailableWorkPlace(job, npc);
-                    lastAssignedJob++; 
-                    Debug.Log("LAJ " + lastAssignedJob );
-                    jobsChecked = 0; 
-                    if (lastAssignedJob >= jobs.Length - 1) { 
-                        lastAssignedJob = 0; 
-                    }
-                }   else if (jobsChecked < jobs.Length - 1) { 
-                        Debug.Log("No Available " + job.type);
-                        lastAssignedJob++;
-                        jobsChecked++;
-                        AssignRandomJob(npc);
-                    }   else {
-                            Debug.Log("No available jobs left");
-                            npc.job = null;
-                            availableJobs = false;
-                        }
-            } else { 
-                Debug.Log("No available jobs left");
-                npc.job = null;
+          
+        while (availableJobs) {
+             lastAssignedJob++;
+            if (lastAssignedJob >= jobs.Length) {
+                lastAssignedJob = 0;
             }
+            if (jobs[lastAssignedJob].isAvailable()) {
+                jobs[lastAssignedJob].add(npc);
+                lastAssignedJob++;
+                jobsChecked = 0;
+                return;
+            } 
+            else {
+                jobsChecked++;
+                if (jobsChecked >= jobs.Length) {
+                    npc.job = null;
+                    availableJobs = false;
+                    return;
+                }
+            }
+        }  
+        npc.job = null;
     }
-
+ 
 
     public static void findAvailableWorkPlace (Job job, NPC npc) {
 
@@ -79,7 +86,7 @@ public class JobManager : MonoBehaviour
         }
 
            
-        while (!wpFound) { // currently O(n)
+        while (!wpFound) { 
             if (workPlaces[i].hasVacancy()) {
                 wpFound = true;
             } else {

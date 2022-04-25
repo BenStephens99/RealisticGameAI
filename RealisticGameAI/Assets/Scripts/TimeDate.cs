@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class TimeDate : MonoBehaviour
 {
-   public struct time {
-      static public int hour;
-      static public int minute;
-    }
+  
+    static public gameTime time;
     static public string day;
     static public string currentTime;
 
-    int dayCounter;
+    public static int dayCounter;
 
      float t = 0.0f;
      float interpolationPeriod = 1.0f;
 
    void Start () {
+       time = new gameTime();
+
        time.hour = 00;
        time.minute = 00;
        dayCounter = 1;

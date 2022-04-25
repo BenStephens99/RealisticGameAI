@@ -7,7 +7,6 @@ using System.Text;
 public class NPC : MonoBehaviour
 {
 
-
     public string fullName;  
     public string sex;
     public int age;
@@ -21,26 +20,22 @@ public class NPC : MonoBehaviour
     public Job job;
     public WorkPlace workPlace;
     public House house;
-    public Transform workPos;
+    public WorkingPos workPos;
 
     [HideInInspector]
     public NPCController controller;
 
     [HideInInspector]
     public NPCActions actions;
-    private IntelligentAgent Agent;
 
     [DllImport("Engine.dll")]
     [return: MarshalAs(UnmanagedType.BStr)]
-    private static extern void init(int id, string name);
-
-  
+    private static extern string init(string name, int id);
 
 void Awake()
     {
         controller = GetComponent<NPCController>();
         actions = GetComponent<NPCActions>();
-        Agent = GetComponent<IntelligentAgent>();
         sex = AssignSex();
         age = Random.Range(18, 30);
         fullName = AssignName(sex);
@@ -48,12 +43,12 @@ void Awake()
         hand = randomHand();
         stateMachine = GetComponent<StateMachine>();
         state = "";
+        
     }
 
     void Start() {
-        //init(idNumber, fullName);
+        Debug.Log(init(fullName, idNumber));
     }
-
     string randomHand() { 
         int i = Random.Range(1, 11);
        
@@ -101,5 +96,16 @@ void Awake()
     }
 
 
+    public void interact(NPC npc) {
+        npc.approached(this);
+        Debug.Log(this.fullName + "Interacting");
+        this.controller.stop();
+
+    }
+
+    void approached (NPC npc) {
+        this.controller.stop();
+        Debug.Log (this.fullName + "Aprroached");
+    }
 
 }

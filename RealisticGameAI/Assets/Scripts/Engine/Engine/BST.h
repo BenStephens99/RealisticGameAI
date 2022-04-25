@@ -9,7 +9,6 @@ class BST
 
 public:
 
-
 	NPC* root = NULL;
 
 	bool isEmpty();

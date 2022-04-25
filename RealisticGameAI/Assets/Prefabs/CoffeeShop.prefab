@@ -542,6 +542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08262a0b82e60a4c937d37eb6db4744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npc: {fileID: 0}
+  occupied: 0
 --- !u!1 &3213673428097814669
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,9 +832,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   workers: []
-  workingPos:
-  - {fileID: 4660784227970321052}
+  workingPositions:
   - {fileID: 1204675982581464213}
+  - {fileID: 4660784227970321052}
   maxNumber: 0
 --- !u!1 &3525541559933129771
 GameObject:
@@ -2000,6 +2002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08262a0b82e60a4c937d37eb6db4744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npc: {fileID: 0}
+  occupied: 0
 --- !u!1 &6273326872257772283
 GameObject:
   m_ObjectHideFlags: 0

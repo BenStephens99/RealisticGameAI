@@ -12,8 +12,6 @@ public class HouseManager : MonoBehaviour
  int roadStart = 0;
  int roadEnd = 0;
 
-
- 
     public void init () {
 
      roads = FindObjectsOfType<ResidentialRoad>();

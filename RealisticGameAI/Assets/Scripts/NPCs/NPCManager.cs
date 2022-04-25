@@ -16,9 +16,8 @@ public class NPCManager : MonoBehaviour
     public void createNPCs(int num)
     {
          for (int v = 0; v <= (num - 1); v++) {
-            npcList.Add(Instantiate(npcPrefab, new Vector3(-75, 0, 0), Quaternion.identity));
+            npcList.Add(Instantiate(npcPrefab, new Vector3(-75 , 0, 0 + (v+5)), Quaternion.identity));
             npcPrefab.idNumber = v+1;
-            Debug.Log(v+1);
         }
     }
 

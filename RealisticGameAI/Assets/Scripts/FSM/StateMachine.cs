@@ -4,39 +4,53 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {   
-    public NPC npc;
+    public NPC me;
     public State currentState;
     public static Idle idle;
     public static Moving moving;
+    public static Working working;
 
     void Awake () {
         moving = new Moving();
         idle = new Idle();
+        working = new Working();
+        me = GetComponentInParent<NPC>();
+        currentState = idle;
     }
 
     void Start () {
         currentState = idle;
-        currentState.Enter(npc);
+        currentState.Enter(me);
     }
 
     void Update () {
         if (currentState != null) {
-            currentState.UpdateLogic(npc);
+            currentState.UpdateLogic(me);
         }
     }
 
     void LateUpdate() {
          if (currentState != null) {
-            currentState.UpdatePhysics(npc);
+            currentState.UpdatePhysics(me);
+        }
+    }
+
+    public void OnTriggerEnter (Collider collider)
+    {
+        if (collider.tag == "NPC") {
+        NPC npc = collider.GetComponent<NPC>();
+        currentState.OnCollision(me, npc);
         }
     }
 
     public void changeState (State newState) {
-        currentState.Exit(npc);
+        currentState.Exit(me);
         currentState = newState;
-        currentState.Enter(npc);
-        npc.state = currentState.stateName;
+        currentState.Enter(me);
+        me.state = currentState.stateName;
     }
+
+
 }
 
 

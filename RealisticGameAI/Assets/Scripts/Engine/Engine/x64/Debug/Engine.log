@@ -1,19 +1,2 @@
-﻿  BST.cpp
-  Chat.cpp
-  Interact.cpp
-  Main.cpp
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\Main.cpp(34,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\Main.cpp(34,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\Main.cpp(37,102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\Main.cpp(37,81): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\Main.cpp(37,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Me.cpp
-  NN.cpp
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(36,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(37,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(63,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\Engine\NN.cpp(62,25): warning C4101: 'outputs': unreferenced local variable
-  NPC.cpp
-  Generating Code...
-     Creating library C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\x64\Debug\Engine.lib and object C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\x64\Debug\Engine.exp
+﻿  DecisionTree.cpp
   Engine.vcxproj -> C:\Users\Stephens\Documents\GitHub\RealisticGameAI\RealisticGameAI\Assets\Scripts\Engine\x64\Debug\Engine.dll
