@@ -9,13 +9,17 @@ c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\script
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\dt.obj
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\chat.obj
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\bst.obj
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\decisiontree.obj
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\x64\debug\engine.lib
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\x64\debug\engine.exp
-c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.ilk
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\x64\debug\engine.dll
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.ilk
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\x64\debug\engine.pdb
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\interactedwith.obj
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\interacttree.obj
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\bst.obj.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\chat.obj.meta
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\decisiontree.obj.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\dt.obj.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.build.cppclean.log.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.dll.recipe.meta
@@ -24,6 +28,7 @@ c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\script
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.vcxproj.filelistabsolute.txt.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\interact.obj.meta
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\interactedwith.obj.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\main.obj.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\me.obj.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\npc.obj.meta
@@ -39,6 +44,7 @@ c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\script
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\link.command.1.tlog.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\link.read.1.tlog.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\link.write.1.tlog.meta
+c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\unsuccessfulbuild.meta
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\cl.command.1.tlog
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\cl.read.1.tlog
 c:\users\stephens\documents\github\realisticgameai\realisticgameai\assets\scripts\engine\engine\x64\debug\engine.tlog\cl.write.1.tlog

@@ -7,15 +7,13 @@
 #include "BST.h"
 #include "NPC.h"
 #include "Me.h"
-#include "DT.h"
-#include "walkPastTree.h"
-#include "workingTree.h"
+#include "DecisionTree.h"
+#include "TreeApproached.h"
 
 class Main {
 public:
 	static Me* me;
 	static NPC* npc;
 	static BST BST;
-	static walkPastTree WalkPastTree;
-	static workingTree WorkingTree;
+	static TreeApproached approached;
 };

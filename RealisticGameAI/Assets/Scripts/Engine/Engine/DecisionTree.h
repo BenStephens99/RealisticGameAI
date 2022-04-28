@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-
+#include "DecisonNodes.h"
 
 
 class DecisionTree
@@ -9,23 +9,13 @@ class DecisionTree
 public:
 	DecisionTree();
 
-	class Node {
-	public:
-		Node();
-		Node* left;
-		Node* right;
-		std::string out;
+	DecisionNode* rootNode;
+	DecisionNode* currentNode;	
+	std::string output;
 
-		virtual std::string Evaluate();
+	virtual std::string start();
 
-	};
-
-	Node* currentNode;
-
-	void attatchNodes(Node* root, Node* left, Node* right);
-	void attatchNodes(Node* root, Node* node);
-
-	std::string start();
+	
 
 };
 

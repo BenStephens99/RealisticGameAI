@@ -5,8 +5,7 @@
 Me* Main::me;
 NPC* Main::npc;
 BST Main::BST;
-walkPastTree Main::WalkPastTree;
-workingTree Main::WorkingTree;
+TreeApproached Main::approached;
 
 BSTR toStr(std::string str) {
 	return SysAllocString(_bstr_t(str.c_str()).Detach());
@@ -19,6 +18,11 @@ extern "C" {
 		return toStr("Name: " + Main::me->name);
 	}
 
+	MyFunctions BSTR aproached(int npc) {
+		Main::npc = Main::BST.search(npc);
+		return toStr(Main::approached.start());
+	}
+
 	MyFunctions void updateState(const char* s) {
 		Main::me->currentState = s;
 	}
@@ -29,13 +33,7 @@ extern "C" {
 		Main::BST.insert(newNPC);
 	}
 
-	MyFunctions BSTR walkPast(int npc) { 
-		return toStr(Main::WalkPastTree.start(npc));
-	}
 
-	MyFunctions BSTR working(int npc){
-		return toStr(Main::WorkingTree.start(npc));
-	}
 
 }
 

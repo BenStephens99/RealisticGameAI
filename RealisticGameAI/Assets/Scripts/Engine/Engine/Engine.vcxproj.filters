@@ -27,25 +27,16 @@
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Chat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DT.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="walkPastTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="workingTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DecisionTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InteractTree.h">
+    <ClInclude Include="DecisonNodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeApproached.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,22 +53,16 @@
     <ClCompile Include="BST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DT.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="walkPastTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="workingTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DecisionTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InteractTree.cpp">
+    <ClCompile Include="DecisonNodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeApproached.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
