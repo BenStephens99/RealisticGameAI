@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WorkPlace : Building
 {
-    public List <NPC> workers;
+    public List <NPC> workers = new List<NPC>();
     public WorkingPos[] workingPositions;
     int lastAssPos = 0;
  

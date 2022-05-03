@@ -42,9 +42,9 @@ using UnityEngine;
 
     public virtual void init() {
         days = new int[7] {1,1,1,1,1,0,0};
-        startTime.hour = 9;
+        startTime.hour = 1;
         startTime.minute = 0;
-        endTime.hour = 5;
+        endTime.hour = 17;
         endTime.minute = 0;
     }
     public virtual void work(NPC npc) {}

@@ -15,53 +15,32 @@ public class GameManager : MonoBehaviour
     public NavMeshSurface surface; //VS bug
     public Transform testLocation;
 
+    public NPCController NpcPrefab;
+
+
+
 
     void Awake () {
         
         jm.init();
         npcm.init();
         hm.init();
+
+        hm.createHouses(npcm.npcList);
+        surface.BuildNavMesh();
+
+        foreach(NPC npc in npcm.npcList) {
+        NPCController newNPC = Instantiate(NpcPrefab, npc.house.transform, false);
+        newNPC.npc = npc;
+        }
+   
     }
     
     void Start()
     {
-        hm.createHouses(npcm.npcList);
-        surface.BuildNavMesh();
-    }   
+     
+    
+    }  
 
-    void Update () {
-
-        if (Input.GetKeyDown("e")) {
-           foreach (NPC npc in npcm.npcList) {
-               if (npc.workPlace != null) {
-                   npc.controller.destination = npc.workPlace.transform.position;
-               } else {
-                   npc.controller.destination = npc.house.transform.position;
-               }
-               
-           }
-        }
-
-        
-        if (Input.GetKeyDown("f")) {
-           foreach (NPC npc in npcm.npcList) {
-               if (npc.workPos != null) {
-                   npc.controller.destination = npc.workPos.transform.position;
-               } else {
-                   npc.controller.destination = npc.house.transform.position;
-               }
-               
-           }
-        }
-
-        if (Input.GetKeyDown("space")) {
-                   foreach (NPC npc in npcm.npcList) {
-                       npc.stateMachine.changeState(StateMachine.moving);
-                   }
-        }
-        
-    }
 }
-
-
                                 

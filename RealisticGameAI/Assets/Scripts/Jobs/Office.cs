@@ -7,6 +7,7 @@ using UnityEngine;
     public Office () : base ("Office", 9) { }
     
     public override void init() {
+      base.init();
         maxNumber = (JobManager.officeBuildings.Length) * maxPerStore;
     }
 }

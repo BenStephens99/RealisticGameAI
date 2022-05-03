@@ -3092,12 +3092,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef8492450e8574e94e32d1c1a6a7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcm: {fileID: 1460029814}
   hm: {fileID: 1460029815}
   jm: {fileID: 1460029816}
   player: {fileID: 8896842222316154351, guid: 57bc61e5a6981304a808f47933764735, type: 3}
   surface: {fileID: 198407978}
   testLocation: {fileID: 259856669}
+  NpcPrefab: {fileID: 7089125516078657013, guid: 88586acbce9828c43930b8832e90155f,
+    type: 3}
 --- !u!4 &1460029813
 Transform:
   m_ObjectHideFlags: 0
@@ -3124,10 +3125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccfe8102b8b19ec4ba537e94d0474a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfNpcs: 2
-  npcPrefab: {fileID: 863363492855624256, guid: 88586acbce9828c43930b8832e90155f,
-    type: 3}
-  npcList: []
+  numOfNpcs: 1
 --- !u!114 &1460029815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3140,7 +3138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34606e6e45ecc8f4f86b891ed2548df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  housePrefab: {fileID: -8624874020974451668, guid: d9115a582ca22f542bfe04c476517231,
+  housePrefab: {fileID: 6616078735933477515, guid: d9115a582ca22f542bfe04c476517231,
     type: 3}
   roads: []
 --- !u!114 &1460029816
