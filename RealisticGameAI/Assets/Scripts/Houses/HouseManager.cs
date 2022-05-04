@@ -65,8 +65,7 @@ public class HouseManager : MonoBehaviour
             sp.occupied = true;
         } else {
             sp.GetComponentInChildren<House>().add(npc);
-            Debug.Log ("House Already at location" + sp.GetComponent<House>() + " npc added to house"); 
-    
+
         }
             
     }

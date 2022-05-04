@@ -17,12 +17,10 @@ public class Idle : State
         base.UpdateLogic(me);
     
       if (me.job != null) {
-            if (me.job.days[TimeDate.dayCounter] == 1) {
-            if (TimeDate.time.hour == me.job.startTime.hour && (TimeDate.time.minute == me.job.startTime.minute + 30)) {
-             me.stateMachine.changeState(StateMachine.working);
-                }   else if (TimeDate.time.hour == me.job.startTime.hour - 1 && (TimeDate.time.minute + 30) == me.job.startTime.minute) {
-                me.stateMachine.changeState(StateMachine.working);
-                }
+  
+            if (me.job.startTime.hour == TimeDate.time.hour + 1) {
+                me.nextDestination = me.workPos;
+                me.stateMachine.changeState(StateMachine.moving);
             }
         } 
     }

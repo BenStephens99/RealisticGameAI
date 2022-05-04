@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
+using UnityEngine;
 public class NPCManager 
 {
-    public int numOfNpcs;
+    public JobManager jobManager;
+
     public List<NPC> npcList = new List<NPC> ();
 
-    public void init () {
-        createNPCs(numOfNpcs); 
-        assignRandomJobs();
+    public NPCManager(int num) {
+        
+        createNPCs(num); 
     }
 
     public void createNPCs(int num)
@@ -20,9 +22,11 @@ public class NPCManager
         }
     }
 
-    public  void assignRandomJobs() {
+    public void assignRandomJobs(CoffeeShop[] _coffeeShops, OfficeBuilding[] _officeBuildings, ItemShop[] _itemShops) {
+         jobManager = new JobManager(_coffeeShops, _officeBuildings, _itemShops);
          foreach (NPC npc in npcList) {
-            JobManager.AssignRandomJob(npc);
+            jobManager.AssignRandomJob(npc);
+            
         }
     }
 

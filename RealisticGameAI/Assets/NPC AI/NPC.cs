@@ -10,7 +10,8 @@ public class NPC
     public string JobTitle;
     public int idNumber;
     public int speed;
-    public string hand; 
+    public string hand;   
+    static Random rand = new Random();
 
     //System components
     public StateMachine stateMachine;
@@ -23,9 +24,15 @@ public class NPC
 
     //House
     public House house;
-    public bool move;
 
-    Random rand = new Random();
+    //Control - Engine Specific 
+    public NPCController controller;
+    //
+
+    //Control
+    public Destination nextDestination;
+    public string UIText;
+    public bool interacting = false;
 
 public NPC()
     {
@@ -111,6 +118,24 @@ public NPC()
         } 
 
         
+    }
+
+    public void go() {
+        controller.go();
+    } 
+
+    public void stop() {
+        controller.stop();
+    }
+
+    public void interact (string text) {
+        interacting = true;
+        UIText = text;
+    }
+
+    public void interacted (string text) {
+        interacting = true;
+        UIText = text;
     }
 
   

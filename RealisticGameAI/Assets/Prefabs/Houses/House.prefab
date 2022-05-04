@@ -1445,7 +1445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84768096292589316}
-  - component: {fileID: 6616078735933477515}
+  - component: {fileID: -442852689283062998}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -1468,7 +1468,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6616078735933477515
+--- !u!114 &-442852689283062998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

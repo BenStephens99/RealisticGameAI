@@ -12,6 +12,6 @@
 class Main {
 public:
 	static std::string state;
-	static NPC npc;
+	static NPC* npc;
 	static WorkingTree workingTree;
 };

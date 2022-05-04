@@ -2,7 +2,7 @@
 #include "Main.h"
 #define MyFunctions _declspec(dllexport)
 
-NPC Main::npc;
+NPC* Main::npc;
 WorkingTree Main::workingTree;
 std::string Main::state;
 
@@ -18,11 +18,9 @@ extern "C" {
 		return toStr("Hello WOrld");
 	}
 
-	MyFunctions BSTR aprroached(int rel, const char* state) {
-		Main::npc.relationship = rel;
-		Main::npc.known = 1;
+	MyFunctions BSTR aprroached(NPC* npc, const char* state) {
+		Main::npc = npc;
 		Main::state = state;
-
 
 		if (Main::state == "Working") {
 			return toStr(Main::workingTree.start());

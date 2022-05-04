@@ -6,10 +6,10 @@ public class Working : State
 
     public Working () : base ("Working") { }
 
-    public override void Enter(NPC npc)
+    public override void Enter(NPC me)
     {
-        base.Enter(npc);
-        npc.move = true;
+        base.Enter(me);
+        me.go();
         
     }
     public override void UpdatePhysics(NPC me)

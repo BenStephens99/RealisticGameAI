@@ -35,6 +35,12 @@ public class StateMachine
         }
     }
 
+    public void onCollision (NPC npc) {
+        if (currentState != null) {
+            currentState.OnCollision(me, npc);
+        }
+    }
+
     public void changeState (State newState) {
         currentState.Exit(me);
         currentState = newState;

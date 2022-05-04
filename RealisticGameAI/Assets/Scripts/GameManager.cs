@@ -2,45 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using System.Runtime.InteropServices;
 
 
 public class GameManager : MonoBehaviour
 {
         
-    public NPCManager npcm;
+    public NPCManager npcManager;   
+    public int numOfNpcs;
     public HouseManager hm;
-    public JobManager jm;
     public Player player;
-    public NavMeshSurface surface; //VS bug
-    public Transform testLocation;
-
-    public NPCController NpcPrefab;
+    public NavMeshSurface surface; 
+    public NPCController npcController;
 
 
+    [DllImport("Engine.dll")]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    static extern string aprroached(Info npc, string state);
 
-
+    static public TimeDate timeDate;
     void Awake () {
-        
-        jm.init();
-        npcm.init();
+        timeDate = new TimeDate();
+
+        npcManager = new NPCManager(numOfNpcs);
+        npcManager.assignRandomJobs(FindObjectsOfType<CoffeeShop>(), FindObjectsOfType<OfficeBuilding>(), FindObjectsOfType<ItemShop>());
+
         hm.init();
 
-        hm.createHouses(npcm.npcList);
+        hm.createHouses(npcManager.npcList);
         surface.BuildNavMesh();
 
-        foreach(NPC npc in npcm.npcList) {
-        NPCController newNPC = Instantiate(NpcPrefab, npc.house.transform, false);
-        newNPC.npc = npc;
+        foreach(NPC npc in npcManager.npcList) {
+            NPCController newNPC = Instantiate(npcController, npc.house.transform, false);
+            newNPC.npc = npc;
+            npc.controller = newNPC;
         }
-   
     }
     
     void Start()
     {
-     
-    
+        Info Mark;
+        Mark.name = "Steven";
+        Mark.relationship = 70;
+        
+        Debug.Log("TEST " + aprroached(Mark, "Working"));
     }  
-
+    void Update () {
+        timeDate.Update(Time.deltaTime);
+    }
+    
 }
                                 

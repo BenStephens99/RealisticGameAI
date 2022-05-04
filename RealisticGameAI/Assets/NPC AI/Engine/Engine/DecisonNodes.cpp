@@ -2,10 +2,9 @@
 #include "DecisionNode.h"
 #include "Main.h"
 
-
 DecisionNode* DecisonNodes::Known_Unknown::Evaluate()
 {
-	if (Main::npc.known == 1) {
+	if (Main::npc != NULL) {
 		return leftNode;
 	}
 	else {
@@ -15,12 +14,12 @@ DecisionNode* DecisonNodes::Known_Unknown::Evaluate()
 
 DecisionNode* DecisonNodes::Like_Dislike::Evaluate()
 {
-	std::cout << Main::npc.relationship << std::endl;
+	std::cout << Main::npc->relationship << std::endl;
 
-	if (Main::npc.relationship >= 70) {
+	if (Main::npc->relationship >= 70) {
 		return leftNode;
 	}
-	else if (Main::npc.relationship <= 30) {
+	else if (Main::npc->relationship <= 30) {
 		return rightNode;
 	}
 	else {
@@ -29,8 +28,10 @@ DecisionNode* DecisonNodes::Like_Dislike::Evaluate()
 }
 
 DecisionNode* DecisonNodes::Named_UnNamed::Evaluate()
-{
-	if (Main::npc.name != "Unknown") {
+{	
+	std::string Unknown = "Unknown";
+
+	if (Main::npc->name != Unknown) {
 		return leftNode;
 	}
 	else {
@@ -40,7 +41,7 @@ DecisionNode* DecisonNodes::Named_UnNamed::Evaluate()
 
 DecisionNode* DecisonNodes::LikedPlus_Liked::Evaluate()
 {
-	if (Main::npc.relationship >= 90) {
+	if (Main::npc->relationship >= 90) {
 		return leftNode;
 	}
 	else {

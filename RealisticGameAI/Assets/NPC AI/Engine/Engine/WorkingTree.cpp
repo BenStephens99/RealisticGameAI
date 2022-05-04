@@ -18,7 +18,7 @@ WorkingTree::WorkingTree() {
 	std::string Serve = "Serve ";
 	std::string No_Serve = "No Serve ";
 	std::string Discount = "Discount ";
-	std::string Name = Main::npc.name;
+	std::string Name = "Name ";
 	
 	likePlus = new DecisonNodes::LikedPlus(Serve + Name + Discount);
 
@@ -28,7 +28,7 @@ WorkingTree::WorkingTree() {
 	name_noName_disliked = new DecisonNodes::Named_UnNamed(disliked, No_Serve);
 	name_noName_liked = new DecisonNodes::Named_UnNamed(likedPlus_liked, Serve);
 
-	like_dislike = new DecisonNodes::Like_Dislike(name_noName_liked, name_noName_disliked, Serve); 
+	like_dislike = new DecisonNodes::Like_Dislike(name_noName_liked, name_noName_disliked, Serve);
 
 	known_unknown = new DecisonNodes::Known_Unknown(like_dislike, Serve);
 	rootNode = known_unknown; 

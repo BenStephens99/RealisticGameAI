@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorkingPos : MonoBehaviour
+public class WorkingPos : Destination
 {
     public NPC npc;
     public bool occupied = false;

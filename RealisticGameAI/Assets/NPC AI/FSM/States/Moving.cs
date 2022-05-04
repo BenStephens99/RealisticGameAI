@@ -5,18 +5,13 @@ using System.Runtime.InteropServices;
 
 public class Moving : State
 {   
-    public struct destination {
-        int x;
-        int y;
-        int z;
-    }
 
     public Moving () : base ("Moving") { }
 
     public override void Enter(NPC me)
     {
         base.Enter(me);
-       
+        me.go();
     }
     public override void UpdatePhysics(NPC me)
     {
@@ -24,9 +19,15 @@ public class Moving : State
     }
 
     public override void UpdateLogic(NPC me)
-    {
+    {    
         base.UpdateLogic(me);
-        
+        if (me.nextDestination.transform.position == me.controller.transform.position) {
+           if (me.nextDestination is WorkingPos) {
+               me.stateMachine.changeState(StateMachine.working);
+           } else {
+               me.stateMachine.changeState(StateMachine.idle);
+           }
+        }
     }
 
     public override void OnCollision(NPC me, NPC npc)

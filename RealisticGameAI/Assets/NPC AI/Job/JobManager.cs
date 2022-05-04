@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JobManager : MonoBehaviour
+public class JobManager
 {
-
     public static Job[] jobs;
     public static CoffeeShop[] coffeeShops;
     public static OfficeBuilding[] officeBuildings;
     public static ItemShop[] itemShops;
     
-
-
     static Barista barista;
     static Merchant merchant;
     static Office office;
@@ -20,33 +17,33 @@ public class JobManager : MonoBehaviour
     static int jobsChecked = 0;
     static bool availableJobs = true;
 
-    public void init () {
-
-        coffeeShops = FindObjectsOfType<CoffeeShop>();
-        officeBuildings = FindObjectsOfType<OfficeBuilding>();
-        itemShops = FindObjectsOfType<ItemShop>();
+    public JobManager(CoffeeShop[] _coffeeShops, OfficeBuilding[] _officeBuildings, ItemShop[] _itemShops ) {
+        coffeeShops = _coffeeShops;
+        officeBuildings = _officeBuildings;
+        itemShops = _itemShops;
 
         barista = new Barista();
         merchant = new Merchant();
         office = new Office();
     
         jobs = new Job[] {barista, merchant, office};
-
     }
 
-    public static void AssignRandomJob (NPC npc) {
-          
+    public void AssignRandomJob (NPC npc) {
         while (availableJobs) {
              lastAssignedJob++;
+   
             if (lastAssignedJob >= jobs.Length) {
                 lastAssignedJob = 0;
             }
+
             if (jobs[lastAssignedJob].isAvailable()) {
                 jobs[lastAssignedJob].add(npc);
                 lastAssignedJob++;
                 jobsChecked = 0;
                 return;
             } 
+
             else {
                 jobsChecked++;
                 if (jobsChecked >= jobs.Length) {

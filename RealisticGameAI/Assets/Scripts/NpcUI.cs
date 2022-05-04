@@ -7,14 +7,12 @@ public class NpcUI : MonoBehaviour
 {
     NPCController npcPrefab;
     private Transform player;
-
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI likeText;
 
     void Awake () {
         npcPrefab = GetComponentInParent<NPCController>();
         player = FindObjectOfType<Player>().transform;
-       
     }
 
     void Start() {
@@ -22,6 +20,11 @@ public class NpcUI : MonoBehaviour
     }
     void LateUpdate() {
         transform.LookAt(transform.position + player.forward);
+        if (npcPrefab.npc.interacting == true) {
+            likeText.text = npcPrefab.npc.UIText;
+        } else {
+            likeText.text = "";
+        }
         
     }
 }

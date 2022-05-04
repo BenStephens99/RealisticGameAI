@@ -1,30 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class TimeDate : MonoBehaviour
+
+public class TimeDate 
 {
   
     static public gameTime time;
     static public string day;
     static public string currentTime;
-
     public static int dayCounter;
 
      float t = 0.0f;
      float interpolationPeriod = 1.0f;
 
-   void Start () {
-       time = new gameTime();
+    public TimeDate() {
+        time = new gameTime();
 
-       time.hour = 00;
-       time.minute = 00;
+       time.hour = 07;
+       time.minute = 50;
        dayCounter = 1;
        day = "Monday";
-   }
+    }
 
-   void Update () {
-        t += Time.deltaTime;
+
+   public void Update (float engineClock) {
+        t += engineClock;
          if (t >= interpolationPeriod) {
          t = t - interpolationPeriod;
 
