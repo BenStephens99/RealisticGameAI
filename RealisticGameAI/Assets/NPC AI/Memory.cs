@@ -1,29 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public struct Info {
     public int relationship;
     public string name;
+
+    public void increase() {
+        relationship += 5;
+    }
 }
 
 public class Memory {
 
+static Random rand = new Random();
+
 public Memory() {}
 public class npcNode {
-
     public int idNum;
-    public Info info;
+    public string name;
+    public int relationship;
     public npcNode left;
     public npcNode right;
     public npcNode(int id) {
         idNum = id;
-        info.relationship = 50;
-        info.name = "Unkown";
+        name = "Unknown";
+        relationship = 75;//rand.Next(0, 100);
     }
 }
 
 npcNode root = null;
 
+    public void increaseOpinion(int num) {
+        //get(num).increase;
+    }
     public bool isEmpty() {
         if (root == null) {
             return true;
@@ -32,13 +42,13 @@ npcNode root = null;
          }
     }
 
-    public Info get(int num) {
+    public npcNode get(int num) {
         npcNode npc = search(num);
 
         if (npc == null) {
-            return add(num).info;
+            return add(num);
         } else {
-            return npc.info;
+            return npc;
         }
 
     } 

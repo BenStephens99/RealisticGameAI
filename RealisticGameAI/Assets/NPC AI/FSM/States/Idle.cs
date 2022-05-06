@@ -5,26 +5,41 @@ using UnityEngine;
 public class Idle : State
 {
     public Idle() : base("Idle") {}
-
-    public override void Enter(NPC npc)
+    gameTime timeEntered;
+    bool workingDay;
+    public override void Enter(NPC me)
     {
-       base.Enter(npc);
-      
-    }
+       base.Enter(me);
+
+       timeEntered = TimeDate.time;
+
+       if (me.job != null) {
+            if (me.job.days[TimeDate.dayCounter] == 1) { 
+                workingDay = true;
+            }
+        } else {
+            workingDay = false;
+        }
+    }   
     public override void UpdateLogic(NPC me)
     {
-        
         base.UpdateLogic(me);
-    
-      if (me.job != null) {
-  
-            if (me.job.startTime.hour == TimeDate.time.hour + 1) {
-                me.nextDestination = me.workPos;
-                me.stateMachine.changeState(StateMachine.moving);
+   
+
+        if (workingDay) {
+            if (me.job.startTime.hour -1 == TimeDate.time.hour) {
+                NPCActions.goToWork(me);
             }
-        } 
+        } else if (timeEntered.hour + 2 == TimeDate.time.hour ) {
+            Debug.Log("Decide Next Action");
+        }   
+        
     }
     
+    public override void OnCollision(NPC me, NPC npc)
+    {
+        base.OnCollision(me, npc);
+    }
     
     public override void Exit(NPC npc)
     {

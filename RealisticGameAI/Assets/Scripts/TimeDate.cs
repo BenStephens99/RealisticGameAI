@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine;
 
 public class TimeDate 
 {
@@ -16,7 +16,7 @@ public class TimeDate
     public TimeDate() {
         time = new gameTime();
 
-       time.hour = 07;
+       time.hour = 6;
        time.minute = 50;
        dayCounter = 1;
        day = "Monday";
@@ -67,5 +67,6 @@ public class TimeDate
         currentTime = time.hour.ToString("00") + ":" + time.minute.ToString("00");
      }
    }
+
 
 }

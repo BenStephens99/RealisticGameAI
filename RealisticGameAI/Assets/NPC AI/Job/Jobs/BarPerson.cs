@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-  public class Barista : Job {
+  public class BarPerson : Job {
       
-    public Barista () : base ("Barista", 2) { }
+    public BarPerson () : base ("BarPerson", 2) { }
     
     public override void init() {
       base.init();
       maxNumber = (JobManager.coffeeShops.Length) * maxPerStore;
-      startTime.hour = 8;
-      startTime.minute =0;
+      startTime.hour = 17;
+      startTime.minute = 0;
 
-      endTime.hour = 18;
+      endTime.hour = 2;
       endTime.minute = 0;
 
-      days = new int[7] {1,1,1,1,1,0,1};
+      days = new int[7] {0,1,1,1,1,1,0};
     }
 
     public override void work(NPC npc)

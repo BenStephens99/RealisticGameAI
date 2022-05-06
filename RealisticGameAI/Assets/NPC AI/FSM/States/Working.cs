@@ -9,8 +9,6 @@ public class Working : State
     public override void Enter(NPC me)
     {
         base.Enter(me);
-        me.go();
-        
     }
     public override void UpdatePhysics(NPC me)
     {

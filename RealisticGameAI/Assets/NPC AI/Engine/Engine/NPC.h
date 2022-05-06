@@ -4,6 +4,6 @@ struct NPC
 {
 public:
 	int relationship;
-	std::string name;
+	const char* name;
 };
 

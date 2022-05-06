@@ -29,14 +29,18 @@ public class NPCController : MonoBehaviour
     }
 
     public void OnTriggerEnter (Collider collider)
-    {
+    {   
         if (collider.tag == "NPC") {
             NPCController controller = collider.GetComponent<NPCController>();
-            controller.npc.stateMachine.onCollision(controller.npc);
+            npc.stateMachine.onCollision(controller.npc);
+        } else if (collider.tag == "Player") {
+            Player player = collider.GetComponent<Player>();
+            npc.stateMachine.onCollision(player.npc);
         }
     }
 
     public void go() {
+        if (npc.nextDestination == null) {npc.nextDestination = npc.house;}
         agent.SetDestination(npc.nextDestination.transform.position);
         agent.isStopped = false;
     }

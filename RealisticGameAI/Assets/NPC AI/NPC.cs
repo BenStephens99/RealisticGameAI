@@ -32,7 +32,7 @@ public class NPC
     //Control
     public Destination nextDestination;
     public string UIText;
-    public bool interacting = false;
+    public NPC interactingWith;
 
 public NPC()
     {
@@ -44,6 +44,13 @@ public NPC()
         speed = generateSpeed();
         stateMachine = new StateMachine(this);
         memory = new Memory();
+    }
+
+    public NPC (int isPlayer) {
+        sex = "Male";
+        age = 22;
+        fullName = "Ben Stephens";
+        idNumber = 0;
     }
 
 
@@ -116,27 +123,10 @@ public NPC()
                 return rand.Next (2, 4) /2 ;
 
         } 
-
-        
     }
 
-    public void go() {
-        controller.go();
-    } 
+  
 
-    public void stop() {
-        controller.stop();
-    }
-
-    public void interact (string text) {
-        interacting = true;
-        UIText = text;
-    }
-
-    public void interacted (string text) {
-        interacting = true;
-        UIText = text;
-    }
-
+  
   
 }

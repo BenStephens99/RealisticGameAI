@@ -20,11 +20,6 @@ public class NpcUI : MonoBehaviour
     }
     void LateUpdate() {
         transform.LookAt(transform.position + player.forward);
-        if (npcPrefab.npc.interacting == true) {
-            likeText.text = npcPrefab.npc.UIText;
-        } else {
-            likeText.text = "";
-        }
-        
+        likeText.text = npcPrefab.npc.UIText;
     }
 }

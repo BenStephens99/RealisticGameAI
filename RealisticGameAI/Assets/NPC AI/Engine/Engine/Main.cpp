@@ -4,7 +4,9 @@
 
 NPC* Main::npc;
 WorkingTree Main::workingTree;
-std::string Main::state;
+IdleTree Main::idleTree;
+const char* Main::state;
+
 
 BSTR toStr(std::string str) {
 	return SysAllocString(_bstr_t(str.c_str()).Detach());
@@ -12,21 +14,23 @@ BSTR toStr(std::string str) {
 
 extern "C" {
 
-
-	MyFunctions BSTR test(int npcNode) {
-	
-		return toStr("Hello WOrld");
+	MyFunctions BSTR test(NPC* npcNode, const char* state) {
+		Main::npc = npcNode;
+		Main::state = state;
+		return toStr("This Worked");
 	}
 
-	MyFunctions BSTR aprroached(NPC* npc, const char* state) {
-		Main::npc = npc;
+	MyFunctions BSTR aprroached(NPC* npcNode, const char* state) {
 		Main::state = state;
+		Main::npc = npcNode;
 
-		if (Main::state == "Working") {
+		std::string Working = "Working";
+
+		if (Main::state == Working) {
 			return toStr(Main::workingTree.start());
 		}
 		else {
-			return toStr("Boo");
+			return toStr(Main::idleTree.start());
 		}
 	}
 

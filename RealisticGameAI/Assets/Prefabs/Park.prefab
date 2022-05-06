@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2134345749917660369}
   - component: {fileID: 7482905215382311721}
   - component: {fileID: 6552758210149639980}
+  - component: {fileID: 7605877901597911096}
   m_Layer: 0
   m_Name: Park
   m_TagString: Untagged
@@ -98,6 +99,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7605877901597911096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263372761339587351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ec5e89b0b8b5947acac3f56faeb2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3023673062701727742
 PrefabInstance:
   m_ObjectHideFlags: 0

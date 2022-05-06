@@ -22,8 +22,8 @@ public class NPCManager
         }
     }
 
-    public void assignRandomJobs(CoffeeShop[] _coffeeShops, OfficeBuilding[] _officeBuildings, ItemShop[] _itemShops) {
-         jobManager = new JobManager(_coffeeShops, _officeBuildings, _itemShops);
+    public void assignRandomJobs(CoffeeShop[] _coffeeShops, OfficeBuilding[] _officeBuildings, ItemShop[] _itemShops, Bar[] _bars) {
+         jobManager = new JobManager(_coffeeShops, _officeBuildings, _itemShops, _bars);
          foreach (NPC npc in npcList) {
             jobManager.AssignRandomJob(npc);
             

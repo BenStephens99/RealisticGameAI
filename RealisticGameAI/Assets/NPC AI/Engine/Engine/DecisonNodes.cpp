@@ -30,7 +30,7 @@ DecisionNode* DecisonNodes::Like_Dislike::Evaluate()
 DecisionNode* DecisonNodes::Named_UnNamed::Evaluate()
 {	
 	std::string Unknown = "Unknown";
-
+	
 	if (Main::npc->name != Unknown) {
 		return leftNode;
 	}

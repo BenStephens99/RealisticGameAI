@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     public NavMeshSurface surface; 
     public NPCController npcController;
 
-
     [DllImport("Engine.dll")]
     [return: MarshalAs(UnmanagedType.BStr)]
     static extern string aprroached(Info npc, string state);
@@ -25,7 +24,9 @@ public class GameManager : MonoBehaviour
         timeDate = new TimeDate();
 
         npcManager = new NPCManager(numOfNpcs);
-        npcManager.assignRandomJobs(FindObjectsOfType<CoffeeShop>(), FindObjectsOfType<OfficeBuilding>(), FindObjectsOfType<ItemShop>());
+        npcManager.assignRandomJobs(
+            FindObjectsOfType<CoffeeShop>(), FindObjectsOfType<OfficeBuilding>(), 
+            FindObjectsOfType<ItemShop>(), FindObjectsOfType<Bar>());
 
         hm.init();
 
@@ -41,12 +42,9 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        Info Mark;
-        Mark.name = "Steven";
-        Mark.relationship = 70;
-        
-        Debug.Log("TEST " + aprroached(Mark, "Working"));
+
     }  
+    
     void Update () {
         timeDate.Update(Time.deltaTime);
     }
