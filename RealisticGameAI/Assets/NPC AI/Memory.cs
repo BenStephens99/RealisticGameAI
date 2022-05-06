@@ -25,7 +25,7 @@ public class npcNode {
     public npcNode(int id) {
         idNum = id;
         name = "Unknown";
-        relationship = 75;//rand.Next(0, 100);
+        relationship = rand.Next(0, 100);
     }
 }
 

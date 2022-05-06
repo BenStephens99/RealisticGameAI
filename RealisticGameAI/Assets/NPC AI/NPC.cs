@@ -18,7 +18,7 @@ public class NPC
     public Memory memory;
     
     //Job
-     public Job job;
+    public Job job;
     public WorkPlace workPlace;
     public WorkingPos workPos;
 

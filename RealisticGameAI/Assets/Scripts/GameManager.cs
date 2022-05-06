@@ -15,9 +15,6 @@ public class GameManager : MonoBehaviour
     public NavMeshSurface surface; 
     public NPCController npcController;
 
-    [DllImport("Engine.dll")]
-    [return: MarshalAs(UnmanagedType.BStr)]
-    static extern string aprroached(Info npc, string state);
 
     static public TimeDate timeDate;
     void Awake () {
@@ -42,7 +39,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        
+    
     }  
     
     void Update () {

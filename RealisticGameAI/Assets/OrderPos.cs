@@ -9,6 +9,6 @@ public class OrderPos : Destination
         if (collider.tag == "NPC") {
             NPCController controller = collider.GetComponent<NPCController>();
             controller.npc.stateMachine.changeState(StateMachine.idle);
-        }
+        } 
     }
 }

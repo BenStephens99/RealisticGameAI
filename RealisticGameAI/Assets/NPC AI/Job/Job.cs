@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
   public class Job {
     public string type;
@@ -46,7 +47,9 @@ using System.Collections.Generic;
     }
     public virtual void Update(NPC npc) {
          if (TimeDate.time.hour == npc.job.endTime.hour && TimeDate.time.minute == npc.job.endTime.minute) {
-            npc.stateMachine.changeState(StateMachine.idle);
+            Debug.Log("Shift Over");
+            npc.nextDestination = npc.house;
+            npc.stateMachine.changeState(StateMachine.moving);
         }
     }
     

@@ -21,7 +21,6 @@ using UnityEngine;
 
     public override void Update(NPC npc)
     {
-        Debug.Log(npc.stateMachine.currentState.stateName);
         
         if (TimeDate.time.hour == 14) {
           NPCActions.goToCoffeeShop(npc);

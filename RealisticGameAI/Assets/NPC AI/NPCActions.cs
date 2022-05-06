@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCActions {
 static System.Random rand = new System.Random();
     public static void decide(NPC me, string output) {
-        Debug.Log(output);
+
         switch (output) {
             case "Neutral ":
             speak(me, "Neutral");
@@ -73,18 +73,22 @@ static System.Random rand = new System.Random();
     public static void getServed(NPC npc) {
         if (npc.job is Merchant) {
             NPCActions.goToWork(npc);
+        } else {
+            NPCActions.goHome(npc);
         }
     }
     public static void dontGetServed(NPC npc) {
          if (npc.job is Merchant) {
             NPCActions.goToWork(npc);
-        }
+        }   else {
+                NPCActions.goHome(npc);
+            }
     }
     public static void learnName(NPC npc){
         npc.memory.get(npc.interactingWith.idNumber).name = npc.interactingWith.fullName;
     }
     public static void speak(NPC npc, string text){
-        Debug.Log(text);
+   
         npc.UIText = text;
     }
     public static void goToWork(NPC npc) {
@@ -120,6 +124,13 @@ static System.Random rand = new System.Random();
 
     public static void goHome(NPC npc) {
         npc.nextDestination = npc.house;
+        if (npc.controller != null) {
+            npc.controller.go();
+        }
+    }
+
+    public static void goToMerchant(NPC npc) {
+        npc.nextDestination = JobManager.itemShops[0].orderingPos[0];
         if (npc.controller != null) {
             npc.controller.go();
         }
