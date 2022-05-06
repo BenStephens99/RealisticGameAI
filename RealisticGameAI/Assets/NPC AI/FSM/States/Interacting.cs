@@ -19,7 +19,7 @@ public class Interacting : State
         info.name = node.name;
         info.relationship = node.relationship;
 
-        NPCActions.decide(me, aprroached(info, stateName));
+        NPCActions.decide(me, aprroached(info, me.stateMachine.previousState.stateName));
         timeToEnd = TimeDate.time.minute + 5;
     }   
     

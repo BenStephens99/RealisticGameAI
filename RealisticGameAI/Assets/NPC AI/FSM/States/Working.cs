@@ -18,10 +18,9 @@ public class Working : State
     public override void UpdateLogic(NPC me)
     {
         base.UpdateLogic(me);
+        
+        me.job.Update(me);
 
-        if (TimeDate.time.hour == me.job.startTime.hour && TimeDate.time.minute == me.job.startTime.minute) {
-            me.stateMachine.changeState(StateMachine.idle);
-        }
 
     }
 

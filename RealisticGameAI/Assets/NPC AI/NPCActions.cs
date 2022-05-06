@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 public class NPCActions {
-
+static System.Random rand = new System.Random();
     public static void decide(NPC me, string output) {
         Debug.Log(output);
         switch (output) {
@@ -38,9 +38,48 @@ public class NPCActions {
                 stop(me.interactingWith);
                 }
             break;
+
+            case "Serve ": 
+            speak(me, output);
+            getServed(me.interactingWith);
+            break;
+
+            case "No Serve ":
+            speak(me, output);
+            dontGetServed(me.interactingWith);
+            break;
+
+            case "Serve Name ":
+            speak (me, output);
+            getServed(me.interactingWith);
+            break;
+
+            case "No Serve Name ":
+            speak (me, output);
+            dontGetServed (me.interactingWith);
+            break;
+
+            case "Serve Discount Name ":
+            speak(me, output);
+            getServed(me.interactingWith);
+            break;
+
+            default: 
+            speak (me, output);
+            break;
         }
     }
 
+    public static void getServed(NPC npc) {
+        if (npc.job is Merchant) {
+            NPCActions.goToWork(npc);
+        }
+    }
+    public static void dontGetServed(NPC npc) {
+         if (npc.job is Merchant) {
+            NPCActions.goToWork(npc);
+        }
+    }
     public static void learnName(NPC npc){
         npc.memory.get(npc.interactingWith.idNumber).name = npc.interactingWith.fullName;
     }
@@ -69,6 +108,21 @@ public class NPCActions {
         npc.controller.go();
     }
 
+    public static void goToCoffeeShop(NPC npc) {
+        npc.nextDestination = JobManager.coffeeShops[rand.Next(0, JobManager.coffeeShops.Length)].orderingPos[rand.Next(0,2)];
+        npc.stateMachine.changeState(StateMachine.moving);
+    } 
 
+    public static void goToBar(NPC npc) {
+        npc.nextDestination = JobManager.bars[rand.Next(0, JobManager.bars.Length)].orderingPos[rand.Next(0,2)];
+        npc.stateMachine.changeState(StateMachine.moving);
+    }
+
+    public static void goHome(NPC npc) {
+        npc.nextDestination = npc.house;
+        if (npc.controller != null) {
+            npc.controller.go();
+        }
+    }
 
 }

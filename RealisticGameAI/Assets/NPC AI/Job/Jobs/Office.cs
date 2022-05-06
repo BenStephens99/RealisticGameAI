@@ -18,5 +18,10 @@ using UnityEngine;
       days = new int[7] {1,1,1,1,1,0,0};
     
     }
+
+    public override void Update(NPC npc)
+    {
+        base.Update(npc);
+    }
 }
 

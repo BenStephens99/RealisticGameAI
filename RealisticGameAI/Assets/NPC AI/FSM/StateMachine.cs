@@ -22,6 +22,7 @@ public class StateMachine
     }
 
     public void Start () {
+        previousState = idle;
         currentState = idle;
         currentState.Enter(me);
     }

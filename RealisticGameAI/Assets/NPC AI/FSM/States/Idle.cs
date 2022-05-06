@@ -10,7 +10,6 @@ public class Idle : State
     public override void Enter(NPC me)
     {
        base.Enter(me);
-
        timeEntered = TimeDate.time;
 
        if (me.job != null) {
@@ -20,20 +19,18 @@ public class Idle : State
         } else {
             workingDay = false;
         }
+
+  
     }   
     public override void UpdateLogic(NPC me)
     {
         base.UpdateLogic(me);
-   
-
         if (workingDay) {
             if (me.job.startTime.hour -1 == TimeDate.time.hour) {
                 NPCActions.goToWork(me);
             }
-        } else if (timeEntered.hour + 2 == TimeDate.time.hour ) {
-            Debug.Log("Decide Next Action");
-        }   
-        
+        }
+          
     }
     
     public override void OnCollision(NPC me, NPC npc)

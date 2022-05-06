@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-using UnityEngine;
-
   public class Job {
     public string type;
     public int maxPerStore;
@@ -46,7 +44,11 @@ using UnityEngine;
         endTime.hour = 17;
         endTime.minute = 0;
     }
-    public virtual void work(NPC npc) {}
+    public virtual void Update(NPC npc) {
+         if (TimeDate.time.hour == npc.job.endTime.hour && TimeDate.time.minute == npc.job.endTime.minute) {
+            npc.stateMachine.changeState(StateMachine.idle);
+        }
+    }
     
 }
 

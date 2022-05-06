@@ -9,14 +9,25 @@ using UnityEngine;
     public override void init() {
       base.init();
       maxNumber = (JobManager.itemShops.Length) * maxPerStore;
-      startTime.hour = 12;
+      startTime.hour = 8;
       startTime.minute =0;
 
-      endTime.hour = 22;
+      endTime.hour = 20;
       endTime.minute = 0;
 
       days = new int[7] {1,1,0,1,0,1,0};
     
+    }
+
+    public override void Update(NPC npc)
+    {
+        Debug.Log(npc.stateMachine.currentState.stateName);
+        
+        if (TimeDate.time.hour == 14) {
+          NPCActions.goToCoffeeShop(npc);
+        } else if (TimeDate.time.hour == 20) {
+          NPCActions.goToBar(npc);
+        }
     }
 }
 

@@ -6,6 +6,7 @@ public class WorkPlace : Building
 {
     public List <NPC> workers = new List<NPC>();
     public WorkingPos[] workingPositions;
+    public OrderPos[] orderingPos;
     int lastAssPos = 0;
  
     virtual public void add(NPC npc) {
